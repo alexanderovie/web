@@ -1,0 +1,46 @@
+name: 'Emergency Rollback - Web Fascinante Digital'
+
+on:
+  workflow_dispatch:
+    inputs:
+      deployment_url:
+        description: 'URL del deployment a restaurar'
+        required: true
+        type: string
+      reason:
+        description: 'Razón del rollback'
+        required: true
+        type: string
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Vercel CLI
+      run: npm install -g vercel@latest
+      
+    - name: Rollback deployment
+      run: |
+        echo "Iniciando rollback de emergencia..."
+        echo "Deployment URL: ${{ github.event.inputs.deployment_url }}"
+        echo "Razón: ${{ github.event.inputs.reason }}"
+        
+        # Rollback usando Vercel CLI
+        vercel rollback ${{ github.event.inputs.deployment_url }} --token ${{ secrets.VERCEL_TOKEN }}
+        
+    - name: Verify rollback
+      run: |
+        echo "Verificando rollback..."
+        sleep 30
+        curl -f https://fascinantedigital.com || echo "Rollback verification failed"
+        
+    - name: Create rollback tag
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git tag -a "rollback-$(date +%Y%m%d-%H%M%S)" -m "Emergency rollback: ${{ github.event.inputs.reason }}"
+        git push origin "rollback-$(date +%Y%m%d-%H%M%S)"
