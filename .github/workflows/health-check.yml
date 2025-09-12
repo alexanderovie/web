@@ -1,0 +1,54 @@
+name: 'Health Check - Web Fascinante Digital'
+
+on:
+  schedule:
+    # Run health check every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Health Check - Main Domain
+      run: |
+        echo "Checking https://fascinantedigital.com..."
+        if curl -f -s "https://fascinantedigital.com" > /dev/null; then
+          echo "✅ Main domain is healthy"
+        else
+          echo "❌ Main domain is down"
+          exit 1
+        fi
+        
+    - name: Health Check - WWW Domain
+      run: |
+        echo "Checking https://www.fascinantedigital.com..."
+        if curl -f -s "https://www.fascinantedigital.com" > /dev/null; then
+          echo "✅ WWW domain is healthy"
+        else
+          echo "❌ WWW domain is down"
+          exit 1
+        fi
+        
+    - name: Health Check - Vercel Deployment
+      run: |
+        echo "Checking Vercel deployment..."
+        if curl -f -s "https://web-fascinante-digital.vercel.app" > /dev/null; then
+          echo "✅ Vercel deployment is healthy"
+        else
+          echo "❌ Vercel deployment is down"
+          exit 1
+        fi
+        
+    - name: Create health check summary
+      run: |
+        echo "## Health Check Summary" >> $GITHUB_STEP_SUMMARY
+        echo "- **Timestamp**: $(date)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Main Domain**: ✅ Healthy" >> $GITHUB_STEP_SUMMARY
+        echo "- **WWW Domain**: ✅ Healthy" >> $GITHUB_STEP_SUMMARY
+        echo "- **Vercel Deployment**: ✅ Healthy" >> $GITHUB_STEP_SUMMARY
+        echo "- **Overall Status**: ✅ ALL SYSTEMS OPERATIONAL" >> $GITHUB_STEP_SUMMARY
