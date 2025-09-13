@@ -1,13 +1,12 @@
 import localFont from "next/font/local";
 
-import type { Metadata } from "next";
-
 import "./globals.css";
+import { Toaster } from "sonner";
+
 import { DevelopmentBanner } from "@/components/development-banner";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/sections/footer";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "sonner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -105,16 +104,16 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
-          <Toaster 
+          <Toaster
             position="top-right"
             richColors
             closeButton
             duration={4000}
             toastOptions={{
               style: {
-                background: 'hsl(var(--background))',
-                border: '1px solid hsl(var(--border))',
-                color: 'hsl(var(--foreground))',
+                background: "hsl(var(--background))",
+                border: "1px solid hsl(var(--border))",
+                color: "hsl(var(--foreground))",
               },
             }}
           />

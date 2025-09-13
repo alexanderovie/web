@@ -10,7 +10,6 @@ import {
   Building,
   ChevronRight,
   LucideIcon,
-  CheckCircle,
   AlertCircle,
 } from "lucide-react";
 
@@ -195,9 +194,7 @@ const Contact = () => {
                   : "bg-blue-50 text-blue-700 border border-blue-200"
               }`}
             >
-              {isError ? (
-                <AlertCircle className="size-4" />
-              ) : null}
+              {isError ? <AlertCircle className="size-4" /> : null}
               <span className="text-sm">{message}</span>
             </div>
           )}
