@@ -1,0 +1,94 @@
+{
+  "slug": "google-business-profile",
+  "title": {
+    "es": "Perfil de Google Business",
+    "en": "Google Business Profile"
+  },
+  "hero": {
+    "headline": {
+      "es": "Aparece en Google y atrae más clientes locales",
+      "en": "Show up on Google and attract more local customers"
+    },
+    "subheadline": {
+      "es": "Gestionamos y optimizamos tu perfil de Google para que tu negocio destaque y reciba más contactos.",
+      "en": "We manage and optimize your Google profile so your business stands out and gets more leads."
+    },
+    "image": "/images/services/webbb.webp"
+  },
+  "benefits": [
+    {
+      "icon": "MapPin",
+      "title": { "es": "Más visibilidad local", "en": "More local visibility" },
+      "description": {
+        "es": "Tu negocio aparece en Google Maps y búsquedas cercanas.",
+        "en": "Your business appears on Google Maps and local searches."
+      }
+    },
+    {
+      "icon": "Star",
+      "title": { "es": "Mejores reseñas", "en": "Better reviews" },
+      "description": {
+        "es": "Te ayudamos a conseguir y gestionar opiniones positivas.",
+        "en": "We help you get and manage positive reviews."
+      }
+    },
+    {
+      "icon": "TrendingUp",
+      "title": { "es": "Más clientes", "en": "More customers" },
+      "description": {
+        "es": "Aumenta llamadas, visitas y ventas gracias a una ficha optimizada.",
+        "en": "Increase calls, visits, and sales with an optimized profile."
+      }
+    }
+  ],
+  "gallery": [
+    "/images/services/google-business-profile-1.png",
+    "/images/services/google-business-profile-2.png"
+  ],
+  "process": [
+    {
+      "es": "Analizamos tu situación actual en Google.",
+      "en": "We analyze your current situation on Google."
+    },
+    {
+      "es": "Optimizamos y verificamos tu perfil.",
+      "en": "We optimize and verify your profile."
+    },
+    {
+      "es": "Te guiamos para conseguir más reseñas y clientes.",
+      "en": "We guide you to get more reviews and customers."
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "María López",
+      "text": {
+        "es": "Gracias a Fascinante Digital, mi negocio ahora aparece primero en Google Maps y recibo más llamadas cada semana.",
+        "en": "Thanks to Fascinante Digital, my business now appears first on Google Maps and I get more calls every week."
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "es": "¿Cuánto tarda en verse mi negocio en Google?",
+        "en": "How long does it take for my business to appear on Google?"
+      },
+      "answer": {
+        "es": "Normalmente en 1-2 semanas tras la optimización y verificación.",
+        "en": "Usually 1-2 weeks after optimization and verification."
+      }
+    }
+  ],
+  "cta": {
+    "text": {
+      "es": "¿Listo para destacar en Google?",
+      "en": "Ready to stand out on Google?"
+    },
+    "button": {
+      "es": "Solicita tu diagnóstico gratis",
+      "en": "Request your free diagnosis"
+    },
+    "link": "/contact"
+  }
+}

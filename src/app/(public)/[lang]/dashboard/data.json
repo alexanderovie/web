@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "header": "Hola, me interesa saber más sobre sus servicios de marketing digital",
+    "type": "WhatsApp",
+    "status": "Nuevo",
+    "target": "Ventas",
+    "limit": "Sin límite",
+    "reviewer": "Carlos Ruiz",
+    "conversationId": "573001234567",
+    "lastMessage": "Hola, me interesa saber más sobre sus servicios de marketing digital",
+    "timestamp": "2024-01-15T10:30:00Z",
+    "unreadCount": 1,
+    "phone": "+573001234567"
+  },
+  {
+    "id": 2,
+    "header": "¿Tienen disponibilidad para una consulta esta semana?",
+    "type": "WhatsApp",
+    "status": "En proceso",
+    "target": "Consultoría",
+    "limit": "Sin límite",
+    "reviewer": "María López",
+    "conversationId": "573001234568",
+    "lastMessage": "¿Tienen disponibilidad para una consulta esta semana?",
+    "timestamp": "2024-01-15T09:15:00Z",
+    "unreadCount": 0,
+    "phone": "+573001234568"
+  },
+  {
+    "id": 3,
+    "header": "Gracias por la información, me parece muy interesante",
+    "type": "WhatsApp",
+    "status": "Completado",
+    "target": "Cliente",
+    "limit": "Sin límite",
+    "reviewer": "Ana Torres",
+    "conversationId": "573001234569",
+    "lastMessage": "Gracias por la información, me parece muy interesante",
+    "timestamp": "2024-01-14T16:45:00Z",
+    "unreadCount": 0,
+    "phone": "+573001234569"
+  },
+  {
+    "id": 4,
+    "header": "¿Pueden ayudarme con mi sitio web?",
+    "type": "WhatsApp",
+    "status": "Nuevo",
+    "target": "Desarrollo Web",
+    "limit": "Sin límite",
+    "reviewer": "Juan Pérez",
+    "conversationId": "573001234570",
+    "lastMessage": "¿Pueden ayudarme con mi sitio web?",
+    "timestamp": "2024-01-15T11:20:00Z",
+    "unreadCount": 2,
+    "phone": "+573001234570"
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "id": "web",
+    "title": { "es": "Diseño Web", "en": "Web Design" },
+    "short": {
+      "es": "Sitios modernos y rápidos",
+      "en": "Modern, fast websites"
+    },
+    "description": {
+      "es": "Creamos sitios web a medida, optimizados para conversión, velocidad y experiencia de usuario en todos los dispositivos.",
+      "en": "We build custom websites, optimized for conversion, speed, and user experience on all devices."
+    }
+  },
+  {
+    "id": "google-business-profile",
+    "title": {
+      "es": "Perfil de Google Business",
+      "en": "Google Business Profile"
+    },
+    "short": {
+      "es": "Aparece en Google y atrae más clientes locales",
+      "en": "Show up on Google and attract more local customers"
+    },
+    "description": {
+      "es": "Gestionamos y optimizamos tu perfil de Google para que tu negocio destaque y reciba más contactos.",
+      "en": "We manage and optimize your Google profile so your business stands out and gets more leads."
+    },
+    "heroImage": "/images/homepage/hero-desktop.webp"
+  },
+  {
+    "id": "automation",
+    "title": { "es": "Automatización", "en": "Automation" },
+    "short": { "es": "Procesos automáticos", "en": "Automated processes" },
+    "description": {
+      "es": "Optimiza procesos y ahorra tiempo con automatizaciones digitales personalizadas.",
+      "en": "Optimize processes and save time with custom digital automations."
+    }
+  },
+  {
+    "id": "seo-tecnico",
+    "title": {
+      "es": "SEO Técnico",
+      "en": "Technical SEO"
+    },
+    "short": {
+      "es": "Optimización técnica para Google",
+      "en": "Technical optimization for Google"
+    },
+    "description": {
+      "es": "Mejoramos la estructura, velocidad y rastreabilidad de tu web para que Google la ame y subas posiciones de verdad.",
+      "en": "We optimize your website’s structure, speed, and crawlability so Google loves it and you climb the rankings for real."
+    },
+    "heroImage": "/images/services/seo-tecnico/hero.jpg",
+    "gallery": [
+      "/images/services/seo-tecnico/auditoria.jpg",
+      "/images/services/seo-tecnico/velocidad.jpg",
+      "/images/services/seo-tecnico/indexacion.jpg"
+    ]
+  },
+  {
+    "id": "carga-web",
+    "title": {
+      "es": "Carga Web",
+      "en": "Web Speed"
+    },
+    "short": {
+      "es": "Optimización extrema de velocidad",
+      "en": "Extreme speed optimization"
+    },
+    "description": {
+      "es": "Llevamos la velocidad y el rendimiento de tu sitio al máximo nivel, eliminando cuellos de botella técnicos y asegurando una experiencia de usuario impecable.",
+      "en": "We take your site’s speed and performance to the highest level, removing technical bottlenecks and ensuring a flawless user experience."
+    },
+    "heroImage": "/images/services/carga-web/hero.jpg",
+    "gallery": [
+      "/images/services/carga-web/auditoria.jpg",
+      "/images/services/carga-web/velocidad.jpg",
+      "/images/services/carga-web/indexacion.jpg"
+    ]
+  },
+  {
+    "id": "publicidad-paga",
+    "title": { "es": "Publicidad Paga", "en": "Paid Advertising" },
+    "short": {
+      "es": "Campañas efectivas en Google y Meta",
+      "en": "Effective campaigns on Google & Meta"
+    },
+    "description": {
+      "es": "Gestionamos campañas publicitarias en Google Ads y Meta Ads para atraer clientes listos para comprar y maximizar tu retorno de inversión.",
+      "en": "We manage advertising campaigns on Google Ads and Meta Ads to attract ready-to-buy clients and maximize your return on investment."
+    },
+    "heroImage": "/images/services/publicidad-paga/hero.jpg",
+    "gallery": [
+      "/images/services/publicidad-paga/estrategia.jpg",
+      "/images/services/publicidad-paga/creatividad.jpg",
+      "/images/services/publicidad-paga/resultados.jpg"
+    ]
+  }
+]

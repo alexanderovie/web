@@ -1,0 +1,167 @@
+[
+  {
+    "id": "free",
+    "name": { "es": "Plan Gratis", "en": "Free Plan" },
+    "price": 0,
+    "priceText": { "es": "Gratis", "en": "Free" },
+    "featuresTitle": {
+      "es": "Beneficios Incluidos",
+      "en": "Included Benefits"
+    },
+    "features": [
+      {
+        "name": {
+          "es": "Auditoría digital gratis",
+          "en": "Free digital audit"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Dashboard de métricas de Google",
+          "en": "Google metrics dashboard"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Dashboard de métricas de Meta (Facebook e Instagram)",
+          "en": "Meta (Facebook & Instagram) metrics dashboard"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Diseño web profesional",
+          "en": "Professional web design"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Presencia en 10 directorios locales (Apple Maps, Yelp, etc.)",
+          "en": "Presence in 10 local directories (Apple Maps, Yelp, etc.)"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Automatización de respuesta de reputación",
+          "en": "Reputation response automation"
+        },
+        "included": true
+      }
+    ],
+    "cta": { "es": "Comenzar ahora", "en": "Get started now" }
+  },
+  {
+    "id": "business",
+    "name": { "es": "Plan Business", "en": "Business Plan" },
+    "price": 99,
+    "priceText": { "es": "$99/mes", "en": "$99/mo" },
+    "featuresTitle": {
+      "es": "Beneficios Incluidos",
+      "en": "Included Benefits"
+    },
+    "features": [
+      {
+        "name": {
+          "es": "Auditoría digital gratis",
+          "en": "Free digital audit"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Dashboard de métricas de Google",
+          "en": "Google metrics dashboard"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Dashboard de métricas de Meta (Facebook e Instagram)",
+          "en": "Meta (Facebook & Instagram) metrics dashboard"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Diseño web profesional",
+          "en": "Professional web design"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Presencia en 10 directorios locales (Apple Maps, Yelp, etc.)",
+          "en": "Presence in 10 local directories (Apple Maps, Yelp, etc.)"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Automatización de respuesta de reputación",
+          "en": "Reputation response automation"
+        },
+        "included": true
+      }
+    ],
+    "cta": { "es": "Comenzar ahora", "en": "Get started now" }
+  },
+  {
+    "id": "enterprise",
+    "name": { "es": "Plan Enterprise", "en": "Enterprise Plan" },
+    "price": 149,
+    "priceText": { "es": "$149/mes", "en": "$149/mo" },
+    "featuresTitle": {
+      "es": "Beneficios Incluidos",
+      "en": "Included Benefits"
+    },
+    "features": [
+      {
+        "name": {
+          "es": "Auditoría digital gratis",
+          "en": "Free digital audit"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Dashboard de métricas de Google",
+          "en": "Google metrics dashboard"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Dashboard de métricas de Meta (Facebook e Instagram)",
+          "en": "Meta (Facebook & Instagram) metrics dashboard"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Diseño web profesional",
+          "en": "Professional web design"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Presencia en 10 directorios locales (Apple Maps, Yelp, etc.)",
+          "en": "Presence in 10 local directories (Apple Maps, Yelp, etc.)"
+        },
+        "included": true
+      },
+      {
+        "name": {
+          "es": "Automatización de respuesta de reputación",
+          "en": "Reputation response automation"
+        },
+        "included": true
+      }
+    ],
+    "cta": { "es": "Comenzar ahora", "en": "Get started now" }
+  }
+]

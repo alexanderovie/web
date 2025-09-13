@@ -1,0 +1,19 @@
+{
+  "name": "next-auth-best-practices",
+  "scope": "workspace",
+  "description": "Asegura el uso seguro y escalable de NextAuth con Next.js",
+  "rules": [
+    {
+      "pattern": ".*",
+      "instruction": "Centraliza la configuración de NextAuth en `lib/auth.ts` o `auth.config.ts`."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Usa `getServerSession` desde `next-auth/next` para acceder al usuario autenticado en el server."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Protege rutas privadas usando `middleware.ts` y verifica sesión en el layout cuando sea necesario."
+    }
+  ]
+}

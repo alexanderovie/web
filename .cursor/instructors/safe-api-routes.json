@@ -1,0 +1,19 @@
+{
+  "name": "safe-api-routes",
+  "scope": "workspace",
+  "description": "Seguridad y estructura en rutas API de Next.js",
+  "rules": [
+    {
+      "pattern": ".*",
+      "instruction": "Valida siempre los datos de entrada usando Zod o esquemas seguros antes de procesar la petición."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Protege cualquier ruta que modifique datos usando autenticación (NextAuth, Supabase, etc)."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Separa los handlers por método HTTP (`GET`, `POST`, etc.) y tipa correctamente el cuerpo y la respuesta."
+    }
+  ]
+}

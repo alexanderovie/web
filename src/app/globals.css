@@ -1,0 +1,367 @@
+@import "tailwindcss";
+/*
+  ---break---
+*/
+@custom-variant dark (&:is(.dark *));
+
+@plugin 'tailwindcss-animate';
+@plugin '@tailwindcss/typography';
+
+@variant dark (&:is(.dark *));
+
+@theme {
+  --font-inter: var(--font-inter);
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-foreground2: hsl(var(--foreground-2));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-foreground-subtle: hsl(var(--muted-foreground-subtle));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-showcase: showcase-scroll 15s ease-in-out infinite;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes showcase-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@layer utilities {
+  body {
+    font-family: var(--font-geist-sans), sans-serif;
+  }
+  .heading-1 {
+    font-family: var(--font-geist-sans), sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 53px;
+    color: oklch(0.205 0 0);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  button {
+    cursor: pointer;
+  }
+  [class*="border"] {
+    @apply border-border;
+  }
+
+  /* Efectos de hover para botones */
+  .btn-hover-effect {
+    transition: all 0.2s ease-out;
+  }
+
+  .btn-hover-effect:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 10px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* #FFFFFF */
+    --foreground: 240 10% 4%; /* #09090B */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 240 10% 4%; /* #09090B */
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 240 10% 4%; /* #09090B */
+    --primary: 240 10% 4%; /* #09090B */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --secondary: 0 0% 96%; /* #F5F5F5 */
+    --secondary-foreground: 0 0% 9%; /* #171717 */
+    --muted: 0 0% 96%; /* #F5F5F5 */
+    --muted-foreground: oklch(0.145 0 0);
+    --accent: 0 0% 96%; /* #F5F5F5 */
+    --accent-foreground: 0 0% 9%; /* #171717 */
+    --destructive: 0 84.2% 60.2%; /* #EF4444 */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 0 0% 0% / 0.09; /* #00000017 */
+    --input: 0 0% 89.8%; /* #E5E5E5 */
+    --ring: 240 10% 4%; /* #09090B */
+    --chart-1: 12 76% 61%; /* #E65C41 */
+    --chart-2: 173 58% 39%; /* #2A9D8F */
+    --chart-3: 197 37% 24%; /* #264653 */
+    --chart-4: 43 74% 66%; /* #E9C46A */
+    --chart-5: 27 87% 67%; /* #F4A261 */
+
+    --muted-foreground-subtle: 240 5% 34%; /* #52525B */
+    --google-blue: #4285f4;
+    --google-red: #ea4335;
+    --google-yellow: #fbbc05;
+    --google-green: #34a853;
+    --google-purple: #a142f4;
+    --fascinante-blue: #1662ff;
+  }
+
+  .dark {
+    --background: 240 10% 4%; /* #09090B */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+    --card: 240 10% 4%; /* #09090B */
+    --card-foreground: 0 0% 100%; /* #FFFFFF */
+    --popover: 240 10% 4%; /* #09090B */
+    --popover-foreground: 0 0% 100%; /* #FFFFFF */
+    --primary: 0 0% 100%; /* #FFFFFF */
+    --primary-foreground: 240 10% 4%; /* #09090B */
+    --secondary: 240 10% 10%; /* #19191C */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    --muted: 240 10% 10%; /* #19191C */
+    --muted-foreground: 240 5% 65%; /* #A1A1A1 */
+    --accent: 240 10% 10%; /* #19191C */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    --destructive: 0 84.2% 60.2%; /* #EF4444 */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 0 0% 100% / 0.1; /* #FFFFFF1A */
+    --input: 240 10% 10%; /* #19191C */
+    --ring: 0 0% 100%; /* #FFFFFF */
+    --chart-1: 12 76% 61%; /* #E65C41 */
+    --chart-2: 173 58% 39%; /* #2A9D8F */
+    --chart-3: 197 37% 24%; /* #264653 */
+    --chart-4: 43 74% 66%; /* #E9C46A */
+    --chart-5: 27 87% 67%; /* #F4A261 */
+
+    --muted-foreground-subtle: 240 5% 75%; /* #B8B8B8 - Gris claro para modo oscuro */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-geist-sans), "Geist", "Geist Fallback", sans-serif;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+  }
+
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6 {
+    color: hsl(0 0% 100%); /* Forzar blanco en modo oscuro */
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  h6 {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+@media (min-width: 1281px) {
+  h1 {
+    font-size: 48px;
+    line-height: 53px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  h4 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+}
+/*
+  ---break---
+*/
+:root {
+  --sidebar: hsl(0 0% 98%);
+  --sidebar-foreground: hsl(0, 0%, 0%);
+  --sidebar-primary: hsl(240 5.9% 10%);
+  --sidebar-primary-foreground: hsl(0 0% 98%);
+  --sidebar-accent: hsl(240 4.8% 95.9%);
+  --sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --sidebar-border: hsl(220 13% 91%);
+  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --verified-primary: oklch(44.8% 0.119 151.328);
+  --verified-secondary: oklch(96.2% 0.044 156.743);
+}
+/*
+  ---break---
+*/
+.dark {
+  --sidebar: hsl(240 5.9% 10%);
+  --sidebar-foreground: hsl(240 4.8% 95.9%);
+  --sidebar-primary: hsl(224.3 76.3% 48%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(240 3.7% 15.9%);
+  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
+  --sidebar-border: hsl(240 3.7% 15.9%);
+  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+/*
+  ---break---
+*/
+@theme inline {
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+/*
+  ---break---
+*/
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Sonner: personalización del color de loading */
+[data-sonner-toast][data-state="loading"] {
+  background: var(--fascinante-blue) !important;
+  color: #fff !important;
+}
+[data-sonner-toast][data-state="loading"] [data-content] {
+  color: #fff !important;
+}

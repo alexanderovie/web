@@ -1,0 +1,48 @@
+[
+  {
+    "name": { "es": "Alexander Oviedo", "en": "Alexander Oviedo" },
+    "role": { "es": "CEO y Fundador", "en": "CEO & Founder" },
+    "bio": {
+      "es": "Fundador de Fascinante Digital, Alexander lidera la agencia con visión estratégica y pasión por la innovación digital.",
+      "en": "Founder of Fascinante Digital, Alexander leads the agency with strategic vision and a passion for digital innovation."
+    },
+    "image": "/images/team/1.png",
+    "social": { "twitter": "#", "github": "#" }
+  },
+  {
+    "name": { "es": "Andry Alva", "en": "Andry Alva" },
+    "role": {
+      "es": "Responsable de Redes Sociales",
+      "en": "Social Media Manager"
+    },
+    "bio": {
+      "es": "Andry impulsa la presencia de la agencia en redes sociales, conectando marcas con audiencias de manera creativa y efectiva.",
+      "en": "Andry drives the agency's social media presence, connecting brands with audiences in a creative and effective way."
+    },
+    "image": "/images/team/2.png",
+    "social": { "twitter": "#" }
+  },
+  {
+    "name": { "es": "Camila Torres", "en": "Camila Torres" },
+    "role": { "es": "Directora de Proyectos", "en": "Project Director" },
+    "bio": {
+      "es": "Camila coordina los proyectos clave, asegurando entregas exitosas y clientes satisfechos en cada etapa.",
+      "en": "Camila coordinates key projects, ensuring successful deliveries and satisfied clients at every stage."
+    },
+    "image": "/images/team/3.png",
+    "social": { "twitter": "#", "github": "#" }
+  },
+  {
+    "name": { "es": "Luis Ramírez", "en": "Luis Ramírez" },
+    "role": {
+      "es": "Especialista en Desarrollo Web",
+      "en": "Web Development Specialist"
+    },
+    "bio": {
+      "es": "Luis es experto en desarrollo web y se encarga de crear soluciones digitales robustas y escalables para nuestros clientes.",
+      "en": "Luis is an expert in web development, creating robust and scalable digital solutions for our clients."
+    },
+    "image": "/images/team/4.png",
+    "social": { "twitter": "#" }
+  }
+]

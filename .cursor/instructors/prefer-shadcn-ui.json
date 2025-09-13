@@ -1,0 +1,19 @@
+{
+  "name": "prefer-shadcn-ui",
+  "scope": "workspace",
+  "description": "Siempre usa componentes de ShadCN UI en lugar de HTML plano",
+  "rules": [
+    {
+      "pattern": ".*",
+      "instruction": "Reemplaza elementos HTML como <button>, <input>, <textarea>, <select> y <dialog> por componentes equivalentes de ShadCN UI importados desde '@/components/ui'."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Importa los componentes desde '@/components/ui'. No uses HTML directo ni otras librerías de UI."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Compón bloques nuevos solo con componentes de ShadCN como Card, Form, Label, etc. Nunca uses estilos manuales si ya hay un componente que lo resuelve."
+    }
+  ]
+}

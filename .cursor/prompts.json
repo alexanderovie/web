@@ -1,0 +1,32 @@
+[
+  {
+    "name": "form-multipaso",
+    "description": "Crea un formulario multipaso usando React, Zod y ShadCN UI",
+    "prompt": "Crea un formulario multipaso con validación usando Zod. Cada paso debe tener su propio componente. Usa el sistema de UI de ShadCN para los inputs, labels, botones y navegación entre pasos. Asegúrate de validar cada paso antes de avanzar."
+  },
+  {
+    "name": "dashboard-shadcn",
+    "description": "Crea un dashboard moderno con sidebar, header y contenido",
+    "prompt": "Crea un layout de dashboard con Sidebar a la izquierda, un header superior y una sección de contenido principal. Usa componentes de ShadCN UI como NavigationMenu, Sheet o Menubar para construirlo. Debe ser responsive y moderno."
+  },
+  {
+    "name": "supabase-fetch",
+    "description": "Crea un hook para obtener datos de Supabase con tipado",
+    "prompt": "Crea un hook llamado useBusinessCategories que consulte la tabla 'business_categories' en Supabase usando supabase-js. El hook debe estar tipado correctamente, manejar errores, y exponer loading, error y data."
+  },
+  {
+    "name": "layout-admin",
+    "description": "Crea una estructura layout para panel administrativo",
+    "prompt": "Diseña un layout para panel de administración usando Next.js App Router. Usa 'src/app/(admin)/layout.tsx'. Incluye sidebar, navbar superior y slots para contenido de cada página. Apóyate en Tailwind y componentes de ShadCN."
+  },
+  {
+    "name": "stripe-checkout",
+    "description": "Agrega botón de Stripe Checkout funcional",
+    "prompt": "Agrega un botón de 'Pagar con Stripe' usando ShadCN. Al hacer clic, debe hacer una llamada POST a `/api/stripe/checkout` y redirigir a la sesión de pago. Usa una función asincrónica bien tipada y asegura manejo de errores."
+  },
+  {
+    "name": "datatable-shadcn",
+    "description": "Crea una tabla de datos moderna con paginación y ordenamiento",
+    "prompt": "Crea una tabla interactiva usando TanStack Table y ShadCN UI. La tabla debe soportar ordenamiento por columna, paginación, y filtrado por palabra clave. Utiliza ejemplos reales con datos simulados para poblarla."
+  }
+]

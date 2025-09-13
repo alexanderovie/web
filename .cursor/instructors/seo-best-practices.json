@@ -1,0 +1,19 @@
+{
+  "name": "seo-best-practices",
+  "scope": "workspace",
+  "description": "Mejorar SEO en proyectos Next.js con metadata moderna",
+  "rules": [
+    {
+      "pattern": ".*",
+      "instruction": "Usa `generateMetadata()` en cada `page.tsx` para definir SEO dinámico (title, description, canonical)."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "No uses `<Head>` directamente. Usa el sistema de metadata del App Router en Next.js 13+."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Siempre incluye `openGraph` y `twitter` en la metadata para mejorar la visibilidad en redes."
+    }
+  ]
+}

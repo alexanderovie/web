@@ -1,0 +1,1088 @@
+{
+  "SessionTimeout": {
+    "title": "Session Expiring",
+    "description": "Your session will expire soon due to inactivity. Do you want to keep the session active?",
+    "timeRemaining": "Time remaining",
+    "keepSession": "Keep Session",
+    "logout": "Sign Out"
+  },
+  "WhatsApp": {
+    "title": "WhatsApp",
+    "online": "Online",
+    "available": "Available",
+    "typing": "Typing...",
+    "sendMessage": "Send message",
+    "writeMessage": "Type a message...",
+    "openChat": "Open chat",
+    "closeChat": "Close chat",
+    "minimize": "Minimize",
+    "autoReply": "Thank you for your message. An agent will respond soon. 😊",
+    "welcomeMessage": "Hello! How can we help you?",
+    "errorSending": "Error sending message",
+    "messageSent": "Message sent",
+    "messageDelivered": "Message delivered",
+    "messageRead": "Message read"
+  },
+  "homepage": {
+    "hero": {
+      "titleLine1": "Attract More",
+      "titleLine2": "Clients Today",
+      "subtitle": "Grow your digital presence and connect with more clients in your city and across Latin America. Accessible solutions, real results, and personalized support for your business.",
+      "ctaPrimary": "Get Your Free Assessment",
+      "ctaSecondary": "See Services",
+      "ctaDiagnostico": "See Instant Assessment",
+      "imageAlt": "Hero Fascinante Digital, digital consulting, dashboard, analytics",
+      "badgeTitle": "Professional Web Design"
+    },
+    "services": {
+      "web": {
+        "title": "Professional Web Design That Converts",
+        "description": "We build modern, fast, and optimized websites to attract clients from day one. Your online presence will be your best salesperson, 24/7.",
+        "cta": "I Want a High-Impact Website",
+        "iconTitle": "Benefits"
+      },
+      "localDirectories": {
+        "title": "Show Up Where Your Clients Are Searching",
+        "description": "We manage your presence on Google Maps, Waze, Apple Maps, and top local directories. Increase your visibility and get more leads from nearby customers.",
+        "cta": "Improve My Local Visibility",
+        "iconTitle": "Adaptive"
+      },
+      "automation": {
+        "title": "Automate Your Client Acquisition and Support",
+        "description": "We implement funnels, CRM, and automations on WhatsApp, email, and social media. Save time, respond faster, and turn more opportunities into sales.",
+        "cta": "Automate My Business",
+        "iconTitle": "Optimize"
+      },
+      "complementary": {
+        "title": "Accelerate Your Digital Growth",
+        "description": "In addition to our main services, we help you scale with:\n\n- SEO optimization to appear on Google\n- Website speed and performance improvements\n- Effective advertising on Google Ads and Meta Ads",
+        "cta": "I Want to Grow Faster"
+      }
+    },
+    "carousel": {
+      "items": [
+        {
+          "src": "/images/homepage/realtor.png",
+          "alt": "Real estate website",
+          "category": "Real Estate"
+        },
+        {
+          "src": "/images/homepage/limpieza.png",
+          "alt": "Cleaning services website",
+          "category": "Cleaning"
+        },
+        {
+          "src": "/images/homepage/coacher.png",
+          "alt": "Coaching and mentoring website",
+          "category": "Coaching"
+        },
+        {
+          "src": "/images/homepage/seguros.png",
+          "alt": "Insurance website",
+          "category": "Insurance"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "title": "Real Estate",
+          "description": "Specialized websites for real estate agents. Show properties, capture qualified leads, and close more sales with a professional online presence.",
+          "image": "/images/homepage/realtor.png"
+        },
+        {
+          "title": "Cleaning Services",
+          "description": "Web platforms that highlight your cleaning services. Online bookings, customer testimonials, and a simplified hiring process to grow your portfolio.",
+          "image": "/images/homepage/limpieza.png"
+        },
+        {
+          "title": "Coaching and Mentoring",
+          "description": "Websites for coaches and mentors that convert visitors into clients. Coaching programs, testimonials, and a booking system that scales your business.",
+          "image": "/images/homepage/coacher.png"
+        },
+        {
+          "title": "Insurance",
+          "description": "Web platforms for insurers and agents. Online quotes, policy comparison, and a hiring process that builds trust and closes sales.",
+          "image": "/images/homepage/seguros.png"
+        }
+      ]
+    },
+    "accelerate": {
+      "items": [
+        {
+          "title": "Local and Organic SEO",
+          "description": "We improve your Google ranking so more people find your business when searching for your services in their city or region.",
+          "imageAlt": "Local and Organic SEO"
+        },
+        {
+          "title": "Website Speed Optimization",
+          "description": "We speed up your website so it loads in seconds and you don't lose clients due to slowness. Better experience, more conversions.",
+          "imageAlt": "Website Speed Optimization"
+        },
+        {
+          "title": "Effective Digital Advertising",
+          "description": "We manage campaigns on Google Ads and Meta Ads to attract clients ready to buy. Optimized investment, measurable results.",
+          "imageAlt": "Effective Digital Advertising"
+        },
+        {
+          "title": "Complete Integration",
+          "description": "We connect all your tools and platforms to work in harmony. Smart automation to maximize results.",
+          "imageAlt": "Complete Integration"
+        }
+      ]
+    },
+    "whyUs": {
+      "title": "Your Agency Partner for Real Results",
+      "description": "We are a team passionate about digital marketing and our clients’ success. We focus on local businesses and digital brands looking to grow with modern strategies, technology, and a personal touch.",
+      "cta": "See our approach"
+    },
+    "finalCta": {
+      "title": "Ready to Take Your Business to the Next Level?",
+      "description": "Book a free call and discover how Fascinante Digital can help you grow online with tailored solutions.",
+      "cta": "Book a Free Call"
+    },
+    "meta": {
+      "title": "Fascinante Digital | More clients and sales in US and Latin America",
+      "description": "Web design, local directories, and automation for your business. Real results and personalized support in the US and Latin America. Grow today."
+    }
+  },
+  "footer": {
+    "description": "Your strategic partner in the digital world.",
+    "contactUs": "Contact Us",
+    "callUsNow": "Call us now",
+    "followUs": "Follow Us",
+    "product": {
+      "title": "Product",
+      "features": "Benefits",
+      "pricing": "Pricing"
+    },
+    "company": {
+      "title": "Company",
+      "contact": "Contact",
+      "faq": "FAQ"
+    },
+    "legal": {
+      "title": "Legal",
+      "terms": "Terms Of Service",
+      "privacy": "Privacy Policy"
+    },
+    "social": {
+      "title": "Social Media"
+    },
+    "copyright": "All Rights Reserved."
+  },
+  "testimonials": {
+    "title": "Clients Who Are Already Growing",
+    "description": "See how we've helped businesses like yours get more clients, improve their online presence, and automate their processes.",
+    "items": [
+      {
+        "logo": {
+          "src": "/images/testimonials/1.png",
+          "alt": "Client 1 Logo",
+          "width": 120,
+          "height": 36
+        },
+        "quote": "Thanks to Fascinante Digital, our website now brings us new clients every day.",
+        "author": {
+          "name": "Maria Lopez",
+          "role": "Local shop owner",
+          "image": "/images/team/1.png"
+        },
+        "highlight": "clients"
+      },
+      {
+        "logo": {
+          "src": "/images/testimonials/2.png",
+          "alt": "Client 2 Logo",
+          "width": 120,
+          "height": 36
+        },
+        "quote": "The team helped us show up on Google Maps and get more calls from local customers.",
+        "author": {
+          "name": "Carlos Perez",
+          "role": "Restaurant",
+          "image": "/images/team/2.png"
+        },
+        "highlight": "Google Maps"
+      },
+      {
+        "logo": {
+          "src": "/images/testimonials/3.png",
+          "alt": "Client 3 Logo",
+          "width": 120,
+          "height": 36
+        },
+        "quote": "We automated WhatsApp and now respond to clients much faster, saving hours every week.",
+        "author": {
+          "name": "Ana Torres",
+          "role": "Professional services",
+          "image": "/images/team/3.png"
+        },
+        "highlight": "automated"
+      }
+    ]
+  },
+  "team": {
+    "title": "Digital Marketing Experts at Your Service",
+    "description": "Our team combines creativity, technology, and experience to take your business to the next level."
+  },
+  "contactPage": {
+    "hero": {
+      "badge": "Contact",
+      "title": "Let's Talk About Your Project",
+      "subtitle": "Tell us what you need and we'll get back to you within 24 hours. Our team is ready to help you grow your digital business."
+    },
+    "header": {
+      "iconTitle": "Contact Us",
+      "title": "Let's Talk About Your Project",
+      "description": "Tell us what you need and we'll get back to you within 24 hours."
+    },
+    "form": {
+      "fields": {
+        "name": "Name",
+        "email": "Email address",
+        "message": "Message"
+      },
+      "submitText": "Send message",
+      "toastLoading": "Sending message...",
+      "toastSuccess": "Message sent! We'll get back to you soon.",
+      "toastError": "There was a problem. Please try again."
+    },
+    "contactMethods": {
+      "email": {
+        "title": "Email",
+        "description": "Have questions? Write to us and we'll reply quickly.",
+        "contact": "info@fascinantedigital.com"
+      },
+      "phone": {
+        "title": "Phone",
+        "description": "Call us Monday to Friday, 9am to 6pm.",
+        "contact": "(800) 886-4981",
+        "contactHref": "8008864981"
+      }
+    }
+  },
+  "navigation": {
+    "services": "Services",
+    "blog": "Blog",
+    "about": "About Us",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "dashboard": "Dashboard",
+    "openMenu": "Open Menu",
+    "closeMenu": "Close Menu"
+  },
+  "common": {
+    "developmentBanner": "🚧 This website is under development. 🚧",
+    "toggleTheme": "Toggle theme",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "partners": {
+    "usedBy": "Trusted by Leading Brands:"
+  },
+  "pricingPage": {
+    "hero": {
+      "badge": "Pricing",
+      "title": "Plans and Pricing",
+      "subtitle": "Choose the plan that best fits your business. No surprises, no hidden fees."
+    },
+    "title": "Plans and Pricing",
+    "description": "Choose the plan that best fits your business. No surprises, no hidden fees.",
+    "cta": "Get started now",
+    "featuresTitle": "Benefits Included"
+  },
+  "faqPage": {
+    "hero": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about our services, processes, and support. Get quick answers to the most frequently asked questions."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our services, processes, and support.",
+    "items": [
+      {
+        "question": "What does the professional web design include?",
+        "answer": "It includes a custom website, mobile optimization, Google Analytics integration, and ongoing support."
+      },
+      {
+        "question": "Can I get my business listed on Google Maps?",
+        "answer": "Yes, we manage your presence on Google Maps and other top directories to boost your local visibility."
+      },
+      {
+        "question": "What kind of automations do you offer?",
+        "answer": "We automate WhatsApp, email marketing, CRM, and quick replies to help you save time and close more sales."
+      }
+    ]
+  },
+  "aboutPage": {
+    "hero": {
+      "badge": "About Us",
+      "title": "About Fascinante Digital",
+      "subtitle": "We are a digital marketing agency focused on results for local businesses and digital brands."
+    },
+    "heroTitle": "About Fascinante Digital",
+    "heroDescription": "We are a digital marketing agency focused on results for local businesses and digital brands.",
+    "teamTitle": "Our Team",
+    "teamDescription": "Experts in marketing, design, and technology committed to your success.",
+    "valuesTitle": "Our Values",
+    "values": [
+      {
+        "title": "Innovation",
+        "description": "We apply the latest trends and tools for your business."
+      },
+      {
+        "title": "Closeness",
+        "description": "We get involved and support each client as a true partner."
+      },
+      {
+        "title": "Results",
+        "description": "We measure and optimize every action so your investment pays off."
+      }
+    ]
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "title": "Blog",
+      "subtitle": "Insights, tutorials, and thoughts on modern software development"
+    },
+    "title": "Blog",
+    "description": "Insights, tutorials, and thoughts on modern software development"
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Services",
+      "title": "Our Services",
+      "subtitle": "Discover all the ways we can help your business grow."
+    },
+    "services": {
+      "productStrategy": {
+        "title": "Product Strategy",
+        "description": "From market research to user personas, we help you build products that matter. Our strategic approach ensures your product meets real user needs.",
+        "items": [
+          "Market Research & Analysis",
+          "User Personas & Journey Mapping",
+          "Competitive Analysis",
+          "Product Roadmap Development"
+        ],
+        "deliverables": [
+          "Strategy Document",
+          "User Research Report",
+          "Roadmap & Timeline"
+        ],
+        "duration": "2-4 weeks",
+        "price": "Starting at $5,000"
+      },
+      "design": {
+        "title": "Design",
+        "description": "Beautiful, functional designs that create memorable user experiences. We focus on both aesthetics and usability to create designs that convert.",
+        "items": [
+          "UI/UX Design",
+          "Interactive Prototyping",
+          "Design System Creation",
+          "Usability Testing"
+        ],
+        "deliverables": [
+          "Design System",
+          "Interactive Prototypes",
+          "Design Specifications"
+        ],
+        "duration": "3-6 weeks",
+        "price": "Starting at $8,000"
+      },
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Robust, scalable applications built with modern technologies and frameworks. We ensure your application is fast, secure, and maintainable.",
+        "items": [
+          "Frontend Development",
+          "Backend Development",
+          "API Integration",
+          "Performance Optimization"
+        ],
+        "deliverables": [
+          "Source Code",
+          "Technical Documentation",
+          "Deployment Guide"
+        ],
+        "duration": "6-12 weeks",
+        "price": "Starting at $15,000"
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Strategic growth initiatives to scale your product and maximize impact. We use data-driven approaches to optimize your marketing efforts.",
+        "items": [
+          "SEO Strategy & Implementation",
+          "Analytics & Performance Tracking",
+          "A/B Testing & Optimization",
+          "Content Marketing Strategy"
+        ],
+        "deliverables": [
+          "Marketing Plan",
+          "Analytics Dashboard",
+          "Performance Reports"
+        ],
+        "duration": "Ongoing",
+        "price": "Starting at $3,000/mo"
+      }
+    },
+    "ui": {
+      "whatsIncluded": "What's included:",
+      "deliverables": "Deliverables:",
+      "customQuotes": "Custom quotes available",
+      "getStarted": "Get Started",
+      "needCustomSolution": "Need a custom solution?",
+      "customSolutionDescription": "We offer tailored packages combining multiple services for comprehensive digital transformation.",
+      "scheduleConsultation": "Schedule Consultation"
+    }
+  },
+  "loginPage": {
+    "subtitle": "Please Enter Your Details.",
+    "emailPlaceholder": "Enter Your Email",
+    "passwordPlaceholder": "Enter Your Password",
+    "rememberMe": "Remember Me",
+    "forgotPassword": "Forgot Password",
+    "loginButton": "Log In",
+    "loginWithGoogle": "Log In With Google",
+    "noAccount": "Don’t Have An Account?",
+    "signupLink": "Sign Up",
+    "welcomeText": "Empowering your digital transformation."
+  },
+  "signupPage": {
+    "mainTitle": "Create your account to get started.",
+    "subtitle": "Please enter your details.",
+    "namePlaceholder": "Full Name",
+    "emailPlaceholder": "Email Address",
+    "passwordPlaceholder": "Password",
+    "acceptTerms": "I accept the terms and conditions",
+    "signupButton": "Create Account",
+    "signupWithGoogle": "Sign Up With Google",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Log In"
+  },
+  "dashboard": {
+    "sidebar": {
+      "company": "Acme Inc.",
+      "user": { "name": "shadcn", "email": "m@example.com" },
+      "main": {
+        "dashboard": "Dashboard",
+        "lifecycle": "Lifecycle",
+        "analytics": "Analytics",
+        "projects": "Projects",
+        "team": "Team"
+      },
+      "menu": {
+        "digitalSummary": "Digital Summary",
+        "serpAudit": "SERP Audit",
+        "integrations": "Integrations",
+        "deployments": "Deployments",
+        "googleSearchConsole": "Google Search Console",
+        "googleBusinessProfile": "Google Business Profile",
+        "googleTagManager": "Google Tag Manager",
+        "onPageAnalysis": "On-Page Analysis",
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram",
+        "messenger": "Messenger",
+        "hubspot": "HubSpot",
+        "places": "Places",
+        "geo": "Geo",
+        "conversations": "Conversations",
+        "billing": "Billing",
+        "subscriptions": "Subscriptions",
+        "settings": "Settings"
+      },
+      "clouds": {
+        "capture": "Capture",
+        "proposal": "Proposal",
+        "prompts": "Prompts",
+        "activeProposals": "Active Proposals",
+        "archived": "Archived"
+      },
+      "secondary": {
+        "settings": "Settings",
+        "getHelp": "Get Help",
+        "search": "Search"
+      },
+      "documents": {
+        "dataLibrary": "Data Library",
+        "reports": "Reports",
+        "wordAssistant": "Word Assistant"
+      }
+    },
+    "header": {
+      "documents": "Documents",
+      "github": "GitHub",
+      "manageSubscription": "Manage subscription",
+      "redirecting": "Redirecting...",
+      "unknownError": "Unknown error",
+      "networkError": "Network error. Try again."
+    },
+    "cards": {
+      "totalRevenue": {
+        "description": "Total Revenue",
+        "trend": "Trending up this month",
+        "visitors": "Visitors for the last 6 months"
+      },
+      "newCustomers": {
+        "description": "New Customers",
+        "down": "Down 20% this period",
+        "acquisitionAttention": "Acquisition needs attention"
+      },
+      "activeAccounts": {
+        "description": "Active Accounts",
+        "strongUserRetention": "Strong user retention",
+        "engagementExceedTargets": "Engagement exceed targets"
+      },
+      "growthRate": {
+        "description": "Growth Rate",
+        "steadyPerformanceIncrease": "Steady performance increase",
+        "meetsGrowthProjections": "Meets growth projections"
+      }
+    },
+    "chart": {
+      "title": "Total Visitors",
+      "description": {
+        "full": "Total for the last 3 months",
+        "short": "Last 3 months"
+      },
+      "range": {
+        "3months": "Last 3 months",
+        "30days": "Last 30 days",
+        "7days": "Last 7 days"
+      }
+    },
+    "table": {
+      "selectAll": "Select all",
+      "selectRow": "Select row",
+      "header": "Header",
+      "sectionType": "Section Type",
+      "status": "Status"
+    }
+  },
+  "Home": {
+    "meta": {
+      "title": "Marketing Agency for Latino Businesses | Fascinante Digital",
+      "description": "Grow your local business with web design, SEO directories and automations. Get more clients—request your free audit today.",
+      "keyword1": "digital marketing",
+      "keyword2": "web design",
+      "keyword3": "local SEO",
+      "keyword4": "automations"
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "About Us - Digital Marketing Agency in Florida",
+      "description": "Meet our team and values. We are a digital marketing agency in Florida specialized in helping Latino businesses grow.",
+      "keyword1": "marketing agency",
+      "keyword2": "team",
+      "keyword3": "values",
+      "keyword4": "latino businesses"
+    }
+  },
+  "Services": {
+    "meta": {
+      "title": "Digital Marketing Services | Fascinante Digital",
+      "description": "Web design, local SEO and automation solutions for Latino businesses. Choose the ideal service for your growth.",
+      "keyword1": "marketing services",
+      "keyword2": "local SEO",
+      "keyword3": "web design",
+      "keyword4": "automations"
+    }
+  },
+  "Faq": {
+    "meta": {
+      "title": "Frequently Asked Questions | Fascinante Digital",
+      "description": "Find answers about our services, processes and support. Personalized attention for Latino businesses.",
+      "keyword1": "faq",
+      "keyword2": "support",
+      "keyword3": "services",
+      "keyword4": "latino businesses"
+    }
+  },
+  "Pricing": {
+    "meta": {
+      "title": "Digital Marketing Plans and Pricing | Fascinante Digital",
+      "description": "Discover our plans and pricing for digital marketing services. Transparent pricing, no surprises. Request your free quote today.",
+      "keyword1": "marketing pricing",
+      "keyword2": "plans",
+      "keyword3": "quote",
+      "keyword4": "digital services"
+    }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Digital Marketing Contact | Fascinante Digital",
+      "description": "Ready to grow? Contact us and get personalized digital marketing advice for your Latino business. Get your free consultation today!",
+      "keyword1": "contact",
+      "keyword2": "advice",
+      "keyword3": "digital marketing",
+      "keyword4": "latino businesses"
+    }
+  },
+  "Login": {
+    "meta": {
+      "title": "Login | Fascinante Digital",
+      "description": "Access your account and manage your digital marketing services. Secure, easy-to-use platform for Latino clients.",
+      "keyword1": "login",
+      "keyword2": "access",
+      "keyword3": "clients",
+      "keyword4": "platform"
+    }
+  },
+  "Signup": {
+    "meta": {
+      "title": "Sign Up | Fascinante Digital",
+      "description": "Register for free and start boosting your business with our digital marketing services. Join Fascinante Digital!",
+      "keyword1": "sign up",
+      "keyword2": "register",
+      "keyword3": "digital marketing",
+      "keyword4": "latino businesses"
+    }
+  },
+  "floatingBar": {
+    "cta": "Want tips and updates?",
+    "placeholder": "Your email",
+    "button": "Subscribe",
+    "success": "Thanks for subscribing!",
+    "close": "Close bar",
+    "loading": "Sending subscription...",
+    "error": "Could not subscribe. Please try again."
+  },
+  "forgotPasswordPage": {
+    "title": "Reset Password",
+    "subtitle": "Enter your email and we'll send you a link to reset your password.",
+    "emailPlaceholder": "Email address",
+    "sendButton": "Send reset link",
+    "confirmation": "If your email is registered, you'll receive a link to reset your password. Check your inbox and spam folder."
+  },
+  "resetPasswordPage": {
+    "title": "Reset Password",
+    "subtitle": "Enter your new password.",
+    "passwordPlaceholder": "New password",
+    "confirmPlaceholder": "Confirm new password",
+    "sendButton": "Save password",
+    "success": "Your password has been reset successfully!",
+    "errorRequired": "Please fill in both fields.",
+    "errorMatch": "Passwords do not match.",
+    "loading": "Saving..."
+  },
+  "feature": {
+    "todo_presencia_online": "Includes everything from the Online Presence Plan, plus:",
+    "dominio_propio": "Custom domain included",
+    "email_corporativo": "Professional corporate email",
+    "automatizacion_reputacion": "Reputation response automation",
+    "whatsapp_integrado": "WhatsApp integration",
+    "presencia_apple_maps": "Presence on Apple Maps",
+    "todo_descubrimiento": "Includes everything from the Discovery Plan, plus:",
+    "landing_profesional": "Professional landing page",
+    "numero_corporativo": "Corporate number",
+    "metricas_google": "Google metrics dashboard",
+    "metricas_meta": "Meta (Facebook & Instagram) metrics dashboard",
+    "reportes_basicos": "Access to basic reports",
+    "soporte_email": "Email support",
+    "actualizaciones_automaticas": "Automatic updates",
+    "sin_dominio": "No custom domain"
+  },
+  "Logout": {
+    "success": "Signed out successfully",
+    "successDescription": "You have been signed out. See you soon!"
+  },
+  "servicePages": {
+    "google-business-profile": {
+      "badge": "Landing Page",
+      "heroTitle": "Convert More Clients with a Professional Landing Page",
+      "heroSubtitle": "We design and optimize your landing page to capture leads and sales from day one. Results-focused, fast, and aligned with your brand.",
+      "badges": ["Conversion", "SEO", "Responsive"],
+      "buttons": [
+        { "label": "Request free assessment", "url": "/contact" },
+        { "label": "See examples", "url": "/#projects" }
+      ],
+      "benefitsHeading": "Why Choose Our Landing Pages?",
+      "benefits": [
+        {
+          "title": "Conversion Focused",
+          "description": "Every section is designed to capture leads or sales.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Ultra Fast Loading",
+          "description": "Optimized for speed and mobile experience.",
+          "icon": "Zap"
+        },
+        {
+          "title": "Custom Design",
+          "description": "Tailored to your brand and goals.",
+          "icon": "Palette"
+        },
+        {
+          "title": "Easy Integrations",
+          "description": "Forms, WhatsApp, calendars, and more.",
+          "icon": "Plug"
+        },
+        {
+          "title": "SEO & Analytics",
+          "description": "Ready for ranking and measuring results.",
+          "icon": "BarChart2"
+        },
+        {
+          "title": "Support & Improvements",
+          "description": "Continuous support and adjustments.",
+          "icon": "LifeBuoy"
+        }
+      ],
+      "testimonialQuote": "Our landing page helped us double our contacts and improve lead quality. The process was smooth and the design exceeded our expectations.",
+      "testimonialAuthor": "Laura Gomez",
+      "testimonialRole": "Marketing Director",
+      "galleryTitle": "Successful Landing Page Examples",
+      "gallery": [
+        {
+          "title": "SaaS Startup",
+          "description": "+60% leads in the first month.",
+          "image": "/images/services/landing-page/saas.jpg",
+          "url": "#"
+        },
+        {
+          "title": "Dental Clinic",
+          "description": "Online bookings and greater trust.",
+          "image": "/images/services/landing-page/clinica.jpg",
+          "url": "#"
+        },
+        {
+          "title": "Online Course",
+          "description": "Automated sales and visible testimonials.",
+          "image": "/images/services/landing-page/curso.jpg",
+          "url": "#"
+        }
+      ],
+      "ctaTitle": "Ready for a Landing Page that sells for you?",
+      "ctaButton": { "label": "I want my landing page", "url": "/contact" }
+    },
+    "automation": {
+      "badge": "Automation",
+      "heroTitle": "Automate Processes and Multiply Your Productivity",
+      "heroSubtitle": "We implement digital automations so your business saves time, reduces errors, and turns more opportunities into sales.",
+      "badges": ["WhatsApp", "CRM", "Flows"],
+      "buttons": [
+        { "label": "Request free assessment", "url": "/contact" },
+        { "label": "See success stories", "url": "/#projects" }
+      ],
+      "benefitsHeading": "Why Automate with Fascinante?",
+      "benefits": [
+        {
+          "title": "Instant Responses",
+          "description": "Automate WhatsApp, email, and social media to serve your clients 24/7.",
+          "icon": "Zap"
+        },
+        {
+          "title": "CRM Integration",
+          "description": "Connect your digital channels with your CRM and never lose a lead.",
+          "icon": "Plug"
+        },
+        {
+          "title": "Custom Flows",
+          "description": "We design automations tailored to your sales or support process.",
+          "icon": "Settings"
+        },
+        {
+          "title": "Time Savings",
+          "description": "Reduce repetitive tasks and focus on what matters.",
+          "icon": "BatteryCharging"
+        },
+        {
+          "title": "Reports & Tracking",
+          "description": "Monitor results and optimize your flows with real data.",
+          "icon": "BarChart2"
+        },
+        {
+          "title": "Support & Updates",
+          "description": "We support you in the continuous improvement of your automations.",
+          "icon": "LifeBuoy"
+        }
+      ],
+      "testimonialQuote": "We automated WhatsApp support and now respond to clients much faster, saving hours every week.",
+      "testimonialAuthor": "Ana Torres",
+      "testimonialRole": "Professional services",
+      "galleryTitle": "Successful Automation Cases",
+      "gallery": [
+        {
+          "title": "Dental Clinic",
+          "description": "Automatic scheduling and WhatsApp reminders.",
+          "image": "/images/services/automation/clinica.jpg",
+          "url": "#"
+        },
+        {
+          "title": "Online Store",
+          "description": "Order tracking and automated post-sale support.",
+          "image": "/images/services/automation/tienda.jpg",
+          "url": "#"
+        },
+        {
+          "title": "Online Academy",
+          "description": "Automatic enrollments and notifications for students.",
+          "image": "/images/services/automation/academia.jpg",
+          "url": "#"
+        }
+      ],
+      "ctaTitle": "Ready to automate and grow without limits?",
+      "ctaButton": {
+        "label": "I want to automate my business",
+        "url": "/contact"
+      }
+    },
+    "seo-tecnico": {
+      "badge": "Technical SEO",
+      "heroTitle": "Boost Your Rankings with Advanced Technical SEO",
+      "heroSubtitle": "We optimize your website’s structure, crawlability, and technical health so Google understands it and you climb the rankings for real.",
+      "badges": ["Indexing", "Audit", "Structure"],
+      "buttons": [
+        { "label": "Request free audit", "url": "/contact" },
+        { "label": "See success stories", "url": "/#projects" }
+      ],
+      "benefitsHeading": "Why Choose Our Technical SEO?",
+      "benefits": [
+        {
+          "title": "Comprehensive Audit",
+          "description": "We detect and fix technical issues that hold back your rankings.",
+          "icon": "Search"
+        },
+        {
+          "title": "Effective Indexing",
+          "description": "We ensure Google crawls and understands all your content.",
+          "icon": "RadioTower"
+        },
+        {
+          "title": "SEO Structure",
+          "description": "We implement structured data, sitemaps, and optimal robots.txt.",
+          "icon": "Layers"
+        },
+        {
+          "title": "Security & Accessibility",
+          "description": "We enhance HTTPS, accessibility, and user experience.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Reports & Tracking",
+          "description": "You get clear reports and actionable recommendations.",
+          "icon": "BarChart2"
+        },
+        {
+          "title": "Ongoing Technical Support",
+          "description": "We provide continuous support and technical improvements.",
+          "icon": "LifeBuoy"
+        }
+      ],
+      "testimonial": {
+        "quote": "Thanks to technical SEO, our site climbed the rankings and now we get more quality visits and leads.",
+        "author": "Carlos Méndez, eCommerce Director"
+      },
+      "testimonialQuote": "Thanks to technical SEO, our site climbed the rankings and now we get more quality visits and leads.",
+      "testimonialAuthor": "Carlos Méndez, eCommerce Director",
+      "testimonialRole": "eCommerce Director",
+      "galleryTitle": "Successful Technical SEO Cases",
+      "gallery": [
+        {
+          "src": "/images/services/seo-tecnico/tienda.jpg",
+          "alt": "Optimized online store"
+        },
+        {
+          "src": "/images/services/seo-tecnico/blog.jpg",
+          "alt": "Blog with better indexing"
+        },
+        {
+          "src": "/images/services/seo-tecnico/saas.jpg",
+          "alt": "SaaS startup with Core Web Vitals in green"
+        }
+      ],
+      "cta": {
+        "heading": "Ready to climb the Google rankings?",
+        "text": "Request your free audit and discover how we can improve your site’s technical health.",
+        "button": {
+          "label": "I want to optimize my technical SEO",
+          "url": "/contact"
+        }
+      },
+      "ctaTitle": "Ready to climb the Google rankings?"
+    },
+    "carga-web": {
+      "badge": "Web Speed",
+      "heroTitle": "Your Website, Ultra-Fast and Optimized for Success",
+      "heroSubtitle": "We take your site’s speed and performance to the highest level, removing technical bottlenecks and ensuring a flawless user experience that Google loves.",
+      "badges": ["Speed", "Core Web Vitals", "Audit"],
+      "buttons": [
+        { "label": "Request free audit", "url": "/contact" },
+        { "label": "See success stories", "url": "/#projects" }
+      ],
+      "benefitsHeading": "Why Choose Our Web Optimization?",
+      "benefits": [
+        {
+          "title": "Ultra-Fast Loading",
+          "description": "Your site ready in milliseconds, no waiting or frustration.",
+          "icon": "Zap"
+        },
+        {
+          "title": "Core Web Vitals Maxed Out",
+          "description": "Exceed Google’s standards for experience and performance.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Comprehensive Technical Audit",
+          "description": "We detect and fix every detail holding your site back.",
+          "icon": "BarChart2"
+        },
+        {
+          "title": "Image Optimization",
+          "description": "Your images always light and perfect on any device.",
+          "icon": "Image"
+        },
+        {
+          "title": "Clean, Modern Code",
+          "description": "We refactor and optimize for maximum efficiency.",
+          "icon": "Settings"
+        },
+        {
+          "title": "Ongoing Support",
+          "description": "We help you keep your site at the top, always.",
+          "icon": "LifeBuoy"
+        }
+      ],
+      "testimonial": {
+        "quote": "Our website went from slow to loading in under a second. Now our clients stay, and Google rewarded us with better rankings.",
+        "author": "Carlos Méndez, CEO of TiendaExpress"
+      },
+      "testimonialQuote": "Our website went from slow to loading in under a second. Now our clients stay, and Google rewarded us with better rankings.",
+      "testimonialAuthor": "Carlos Méndez, CEO of TiendaExpress",
+      "testimonialRole": "CEO of TiendaExpress",
+      "galleryTitle": "Real Optimization Results",
+      "gallery": [
+        {
+          "src": "/images/services/carga-web/auditoria.jpg",
+          "alt": "Technical web audit"
+        },
+        {
+          "src": "/images/services/carga-web/velocidad.jpg",
+          "alt": "Extreme speed results"
+        },
+        {
+          "src": "/images/services/carga-web/indexacion.jpg",
+          "alt": "Improvements in indexing and crawling"
+        }
+      ],
+      "cta": {
+        "heading": "Ready for a site that flies?",
+        "text": "Request your free audit and discover how we can take your site to the next level.",
+        "button": { "label": "I want my free audit", "url": "/contact" }
+      },
+      "ctaTitle": "Ready for a site that flies?"
+    },
+    "publicidad-paga": {
+      "heroTitle": "Paid Advertising on Google & Meta",
+      "heroSubtitle": "Attract ready-to-buy clients with strategic and creative advertising campaigns on Google Ads and Meta Ads.",
+      "badges": ["Google Ads", "Meta Ads", "Measurable Results"],
+      "buttons": [
+        { "label": "Request Free Strategy", "url": "/contact" },
+        { "label": "See Success Stories", "url": "/#testimonials" }
+      ],
+      "benefitsTitle": "Why choose our paid advertising management?",
+      "benefits": [
+        {
+          "icon": "Megaphone",
+          "title": "Precise Reach",
+          "description": "We segment your ads to reach exactly those searching for your services, maximizing every dollar invested."
+        },
+        {
+          "icon": "BarChart",
+          "title": "Measurable Results",
+          "description": "Monitor performance in real time and receive clear reports on your return on investment."
+        },
+        {
+          "icon": "Sparkles",
+          "title": "Creativity that Converts",
+          "description": "We create attractive, persuasive ads that highlight your value proposition and generate more clicks and sales."
+        }
+      ],
+      "testimonialQuote": "Thanks to Fascinante Digital's paid advertising management, we doubled our leads in just 2 months. The team is very professional and transparent.",
+      "testimonialAuthor": "María López, Marketing Director",
+      "galleryTitle": "Strategies & Results",
+      "gallery": [
+        {
+          "src": "/images/services/publicidad-paga/estrategia.jpg",
+          "alt": "Campaign strategy"
+        },
+        {
+          "src": "/images/services/publicidad-paga/creatividad.jpg",
+          "alt": "Ad creativity"
+        },
+        {
+          "src": "/images/services/publicidad-paga/resultados.jpg",
+          "alt": "Measurable results"
+        }
+      ],
+      "ctaTitle": "Ready to attract more clients?",
+      "ctaDescription": "Request a personalized strategy and discover how paid advertising can transform your business.",
+      "ctaButton": "I want an effective campaign"
+    }
+  },
+  "auditoria": {
+    "hero": {
+      "badge": "Digital Audit",
+      "title": "Discover Your Potential",
+      "subtitle": "Analyze any business worldwide and get valuable insights for your digital strategy. Detailed information, deep analysis and actionable recommendations to grow.",
+      "ctaDiagnostico": "Search Business",
+      "imageAlt": "Digital audit, business analysis, digital insights"
+    },
+    "autocomplete": {
+      "placeholder": "Search any business worldwide...",
+      "noBusinessFound": "Can't find your business?",
+      "manualMode": "Enter data manually",
+      "loading": "Loading...",
+      "preciseLocation": {
+        "enabled": "Precise location enabled",
+        "denied": "Permission denied: enable it in your browser",
+        "approximate": "Using approximate location. You can improve accuracy.",
+        "getting": "Getting location...",
+        "usePrecise": "Use precise location"
+      },
+      "manual": {
+        "title": "Add business manually",
+        "businessName": "Business name:",
+        "businessNamePlaceholder": "Ex: My Restaurant",
+        "address": "Address:",
+        "addressPlaceholder": "Ex: 123 Main St, Miami, FL",
+        "phone": "Phone:",
+        "phonePlaceholder": "Ex: (305) 555-0123",
+        "website": "Website:",
+        "websitePlaceholder": "Ex: https://myrestaurant.com",
+        "clickToAdd": "Click here to add your business manually",
+        "keyword": "Keyword for audit:",
+        "keywordPlaceholder": "Ex: digital marketing",
+        "cancel": "Cancel",
+        "saveAndContinue": "Save and continue",
+        "businessInformation": "Business Information",
+        "selectBusinessForAddress": "Select a business to see the address",
+        "selectBusinessForPhone": "Select a business to see the phone",
+        "selectBusinessForWebsite": "Select a business to see the website",
+        "generatingReport": "Generating Report...",
+        "generateAuditReport": "🎯 Generate Digital Audit Report"
+      },
+      "searchPlaceholders": {
+        "mcdonalds": "Search: McDonald's, Starbucks...",
+        "restaurant": "Search: Restaurant in Miami...",
+        "pharmacy": "Search: CVS Pharmacy, Target...",
+        "hotel": "Search: Marriott Hotel, Hilton...",
+        "anotherBusiness": "Search for another business..."
+      },
+      "locationInfo": {
+        "searchingNear": "Searching near {city}, {country}",
+        "usingPreciseLocation": "Using precise location"
+      },
+      "errors": {
+        "geolocationNotSupported": "Your browser doesn't support geolocation",
+        "locationPermissionDenied": "Location permission denied",
+        "locationError": "Could not get your location"
+      }
+    }
+  }
+}

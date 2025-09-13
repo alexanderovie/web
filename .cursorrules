@@ -1,0 +1,77 @@
+# Cursor Rules - Fascinante Digital Platform
+
+## 🚀 Next.js 15 Best Practices
+
+### ⚠️ CRITICAL: Async Route Parameters
+- **ALWAYS** use `await params` in Next.js 15 route handlers
+- **NEVER** use `const { param } = params` without await
+- **CORRECT**: `const { param } = await params`
+- **INCORRECT**: `const { param } = params`
+
+### 🔧 TypeScript Strict Mode
+- Use strict TypeScript configuration
+- Always define proper interfaces and types
+- Use `readonly` for immutable data
+- Prefer `const` over `let` when possible
+
+### 🎯 React Best Practices
+- Use `useCallback` for functions passed as props
+- Use `useMemo` for expensive calculations
+- Prefer functional components with hooks
+- Use proper dependency arrays in useEffect
+
+### 🎨 UI/UX Guidelines
+- Use shadcn/ui components consistently
+- Follow the established color scheme
+- Maintain responsive design patterns
+- Use proper spacing and typography
+
+### 🔒 Security & Authentication
+- Always validate user sessions
+- Use environment variables for sensitive data
+- Implement proper error handling
+- Sanitize user inputs
+
+### 📱 Performance Optimization
+- Use Next.js Image component for images
+- Implement proper caching strategies
+- Optimize bundle size
+- Use dynamic imports when appropriate
+
+### 🧪 Code Quality
+- Write self-documenting code
+- Use meaningful variable names
+- Add JSDoc comments for complex functions
+- Follow consistent naming conventions
+
+### 🚨 Error Prevention Rules
+1. **Next.js 15**: Always await route parameters
+2. **Icons**: Use only existing Tabler icons
+3. **API Routes**: Implement proper error handling
+4. **TypeScript**: Use strict typing
+5. **React**: Avoid unnecessary re-renders
+
+### 📋 Code Review Checklist
+- [ ] Async parameters properly awaited
+- [ ] TypeScript types defined
+- [ ] Error handling implemented
+- [ ] Performance optimized
+- [ ] Security measures in place
+- [ ] Responsive design maintained
+- [ ] Accessibility standards met
+
+### 🎯 Project-Specific Rules
+- Use pnpm for package management
+- Follow the established folder structure
+- Use the defined color palette
+- Maintain consistent component patterns
+- Implement proper loading states
+- Use proper error boundaries
+
+### 🔍 Common Pitfalls to Avoid
+- Forgetting to await params in Next.js 15
+- Using non-existent icon imports
+- Missing error handling in API routes
+- Not implementing loading states
+- Ignoring TypeScript strict mode
+- Not following responsive design patterns

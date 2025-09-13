@@ -1,0 +1,161 @@
+
+> fascinante-digital@1.0.0 build /Users/alexanderoviedo/Downloads/v2/fascinante-digital-platform
+> NODE_OPTIONS='--max-old-space-size=8192' next build
+
+   ▲ Next.js 15.3.5
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 10.0s
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./src/app/(public)/[lang]/auditoria/AuditoriaAutocomplete.tsx
+12:10  Warning: 'generateAuditReport' is defined but never used.  @typescript-eslint/no-unused-vars
+73:27  Warning: 'setShowAuditReport' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+74:21  Warning: 'setAuditData' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+78:1  Error: Delete `⏎`  prettier/prettier
+285:7  Error: Delete `········`  prettier/prettier
+286:1  Error: Delete `··`  prettier/prettier
+287:1  Error: Replace `··········` with `········`  prettier/prettier
+288:1  Error: Delete `··`  prettier/prettier
+289:9  Error: Delete `··`  prettier/prettier
+290:1  Error: Replace `············` with `··········`  prettier/prettier
+291:9  Error: Delete `··`  prettier/prettier
+292:1  Error: Delete `··`  prettier/prettier
+727:1  Error: Delete `············`  prettier/prettier
+
+./src/lib/audit-service.ts
+63:1  Error: Delete `····`  prettier/prettier
+77:9  Warning: 'delay' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+133:37  Error: Replace `businessData:·BusinessData` with `⏎··businessData:·BusinessData,⏎`  prettier/prettier
+134:9  Warning: 'client' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+135:1  Error: Delete `··`  prettier/prettier
+139:1  Error: Delete `····`  prettier/prettier
+156:26  Error: Insert `,`  prettier/prettier
+159:44  Error: Insert `,`  prettier/prettier
+162:19  Error: Replace `'Error·en·auditoría·de·sitio·web:'` with `"Error·en·auditoría·de·sitio·web:"`  prettier/prettier
+170:42  Error: Replace `businessData:·BusinessData` with `⏎··businessData:·BusinessData,⏎`  prettier/prettier
+172:1  Error: Delete `··`  prettier/prettier
+177:27  Error: Insert `,`  prettier/prettier
+179:1  Error: Delete `····`  prettier/prettier
+183:1  Error: Delete `······`  prettier/prettier
+186:50  Error: Replace `·?·businessItem.rating·*·20` with `⏎··········?·businessItem.rating·*·20⏎·········`  prettier/prettier
+187:52  Error: Replace `·?·Math.min(businessItem.reviews_count·*·2,·100)` with `⏎··········?·Math.min(businessItem.reviews_count·*·2,·100)⏎·········`  prettier/prettier
+188:53  Error: Replace `·?·getCompetitivePosition(businessItem.rank_group)` with `⏎··········?·getCompetitivePosition(businessItem.rank_group)⏎·········`  prettier/prettier
+198:46  Error: Insert `,`  prettier/prettier
+201:1  Error: Delete `····`  prettier/prettier
+213:9  Warning: 'client' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+214:1  Error: Delete `··`  prettier/prettier
+216:34  Error: Replace ``${DATAFORSEO_CONFIG.baseUrl}/v3/on_page/instant_pages`,` with `⏎······`${DATAFORSEO_CONFIG.baseUrl}/v3/on_page/instant_pages`,⏎·····`  prettier/prettier
+217:1  Error: Insert `··`  prettier/prettier
+218:7  Error: Insert `··`  prettier/prettier
+219:1  Error: Insert `··`  prettier/prettier
+220:1  Error: Replace `········` with `··········`  prettier/prettier
+221:7  Error: Insert `··`  prettier/prettier
+222:1  Error: Insert `··`  prettier/prettier
+223:9  Error: Insert `··`  prettier/prettier
+224:1  Error: Insert `··`  prettier/prettier
+225:11  Error: Insert `··`  prettier/prettier
+226:1  Error: Insert `··`  prettier/prettier
+227:9  Error: Insert `··`  prettier/prettier
+228:1  Error: Insert `··`  prettier/prettier
+229:1  Error: Replace `····}` with `······},⏎····`  prettier/prettier
+236:1  Error: Delete `····`  prettier/prettier
+239:1  Error: Delete `······`  prettier/prettier
+254:55  Error: Insert `,`  prettier/prettier
+256:46  Error: Insert `,`  prettier/prettier
+259:1  Error: Delete `····`  prettier/prettier
+284:1  Error: Delete `··`  prettier/prettier
+291:44  Error: Insert `,`  prettier/prettier
+294:1  Error: Delete `··`  prettier/prettier
+301:43  Error: Insert `,`  prettier/prettier
+304:1  Error: Delete `··`  prettier/prettier
+314:14  Error: Insert `⏎·······`  prettier/prettier
+315:1  Error: Replace `········` with `··········`  prettier/prettier
+316:1  Error: Insert `··`  prettier/prettier
+317:1  Error: Replace `········` with `············`  prettier/prettier
+318:1  Error: Insert `····`  prettier/prettier
+324:14  Error: Insert `⏎·······`  prettier/prettier
+325:9  Error: Insert `··`  prettier/prettier
+326:1  Error: Insert `··`  prettier/prettier
+327:9  Error: Insert `····`  prettier/prettier
+328:1  Error: Insert `····`  prettier/prettier
+334:44  Error: Replace `(item` with `((item)`  prettier/prettier
+338:1  Error: Delete `··`  prettier/prettier
+344:1  Error: Delete `··`  prettier/prettier
+348:1  Error: Delete `··`  prettier/prettier
+352:1  Error: Delete `··`  prettier/prettier
+356:1  Error: Delete `··`  prettier/prettier
+362:1  Error: Delete `··`  prettier/prettier
+369:42  Error: Insert `,`  prettier/prettier
+372:1  Error: Delete `··`  prettier/prettier
+379:37  Error: Insert `,`  prettier/prettier
+382:1  Error: Delete `··`  prettier/prettier
+392:14  Error: Insert `⏎·······`  prettier/prettier
+393:1  Error: Replace `········` with `··········`  prettier/prettier
+394:1  Error: Insert `··`  prettier/prettier
+395:9  Error: Insert `····`  prettier/prettier
+396:1  Error: Replace `········` with `············`  prettier/prettier
+402:14  Error: Insert `⏎·······`  prettier/prettier
+403:9  Error: Insert `··`  prettier/prettier
+404:1  Error: Insert `··`  prettier/prettier
+405:1  Error: Replace `········` with `············`  prettier/prettier
+406:1  Error: Insert `····`  prettier/prettier
+421:50  Error: Insert `⏎···`  prettier/prettier
+422:37  Error: Insert `⏎···`  prettier/prettier
+429:44  Error: Insert `⏎···`  prettier/prettier
+436:42  Warning: 'businessData' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/lib/dataforseo-client.ts
+77:36  Error: Replace ``${config.login}:${config.password}`` with `⏎······`${config.login}:${config.password}`,⏎····`  prettier/prettier
+84:28  Error: Replace `request:·BusinessDataRequest` with `⏎····request:·BusinessDataRequest,⏎··`  prettier/prettier
+86:22  Error: Insert `⏎······`  prettier/prettier
+87:1  Error: Replace `······` with `········`  prettier/prettier
+88:1  Error: Insert `··`  prettier/prettier
+89:1  Error: Insert `··`  prettier/prettier
+90:7  Error: Insert `··`  prettier/prettier
+91:1  Error: Insert `··`  prettier/prettier
+92:1  Error: Replace `····}` with `······},⏎····`  prettier/prettier
+110:21  Error: Replace `'Error·en·DataForSEO·Business·Data·API:'` with `"Error·en·DataForSEO·Business·Data·API:"`  prettier/prettier
+120:22  Error: Insert `⏎······`  prettier/prettier
+121:1  Error: Insert `··`  prettier/prettier
+122:7  Error: Insert `··`  prettier/prettier
+123:5  Error: Replace `}` with `··},⏎····`  prettier/prettier
+141:21  Error: Replace `'Error·obteniendo·detalles·del·negocio:'` with `"Error·obteniendo·detalles·del·negocio:"`  prettier/prettier
+149:26  Error: Replace `category:·string,·location:·string` with `⏎····category:·string,⏎····location:·string,⏎··`  prettier/prettier
+151:22  Error: Insert `⏎······`  prettier/prettier
+152:1  Error: Insert `··`  prettier/prettier
+153:7  Error: Insert `··`  prettier/prettier
+154:1  Error: Replace `······` with `········`  prettier/prettier
+155:7  Error: Insert `··`  prettier/prettier
+156:1  Error: Replace `······` with `········`  prettier/prettier
+157:1  Error: Replace `····}` with `······},⏎····`  prettier/prettier
+175:21  Error: Replace `'Error·buscando·por·categoría:'` with `"Error·buscando·por·categoría:"`  prettier/prettier
+183:22  Error: Replace `businessName:·string,·location:·string` with `⏎····businessName:·string,⏎····location:·string,⏎··`  prettier/prettier
+185:22  Error: Insert `⏎······`  prettier/prettier
+186:1  Error: Replace `······` with `········`  prettier/prettier
+187:1  Error: Insert `··`  prettier/prettier
+188:1  Error: Insert `··`  prettier/prettier
+189:7  Error: Insert `··`  prettier/prettier
+190:1  Error: Insert `··`  prettier/prettier
+191:5  Error: Replace `}` with `··},⏎····`  prettier/prettier
+209:21  Error: Replace `'Error·buscando·por·nombre:'` with `"Error·buscando·por·nombre:"`  prettier/prettier
+
+./src/lib/dataforseo-instant-pages.ts
+182:36  Error: Replace ``${config.login}:${config.password}`` with `⏎······`${config.login}:${config.password}`,⏎····`  prettier/prettier
+189:25  Error: Replace `request:·InstantPagesRequest` with `⏎····request:·InstantPagesRequest,⏎··`  prettier/prettier
+191:22  Error: Insert `⏎······`  prettier/prettier
+192:1  Error: Insert `··`  prettier/prettier
+193:1  Error: Insert `··`  prettier/prettier
+194:1  Error: Replace `······` with `········`  prettier/prettier
+195:1  Error: Insert `··`  prettier/prettier
+196:7  Error: Insert `··`  prettier/prettier
+197:1  Error: Replace `······` with `········`  prettier/prettier
+198:1  Error: Insert `··`  prettier/prettier
+199:1  Error: Replace `······` with `········`  prettier/prettier
+200:1  Error: Replace `····}` with `······},⏎····`  prettier/prettier
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+ ELIFECYCLE  Command failed with exit code 1.

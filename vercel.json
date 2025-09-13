@@ -1,0 +1,10 @@
+{
+  "buildCommand": "NODE_OPTIONS='--max-old-space-size=8192' pnpm build",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  }
+}

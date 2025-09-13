@@ -1,0 +1,15 @@
+{
+  "name": "enforce-folder-structure",
+  "scope": "workspace",
+  "description": "Instruye a Cursor a respetar la estructura del proyecto Fascinante Digital",
+  "rules": [
+    {
+      "pattern": ".*",
+      "instruction": "Usa `src/app` para páginas y rutas usando el App Router de Next.js."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Usa `components/` para UI reutilizable, `lib/` para lógica compartida, `hooks/` para custom hooks, y `types/` para tipos globales. No mezcles funciones o responsabilidades entre carpetas."
+    }
+  ]
+}

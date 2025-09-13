@@ -1,0 +1,19 @@
+{
+  "name": "typescript-standards",
+  "scope": "workspace",
+  "description": "Mantén buenas prácticas de TypeScript en todo el proyecto",
+  "rules": [
+    {
+      "pattern": ".*",
+      "instruction": "Prefiere `type` sobre `interface` para definir props y estructuras simples."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Evita `any`. Usa tipos estrictos o `unknown` con validación explícita."
+    },
+    {
+      "pattern": ".*",
+      "instruction": "Coloca todos los tipos globales o compartidos en `types/`, no dentro del componente."
+    }
+  ]
+}

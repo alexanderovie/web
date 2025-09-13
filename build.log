@@ -1,0 +1,20 @@
+
+> fascinante-digital@1.0.0 build /Users/alexanderoviedo/Downloads/v2/fascinante-digital-platform
+> NODE_OPTIONS='--max-old-space-size=8192' next build
+
+   ▲ Next.js 15.3.5
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 12.0s
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./src/app/(public)/[lang]/auditoria/AuditoriaAutocomplete.tsx
+293:25  Error: Replace `/*·ignore·fire-and-forget·*/` with `⏎··········/*·ignore·fire-and-forget·*/⏎········`  prettier/prettier
+
+./src/app/api/onpage/instant-pages/route.ts
+55:23  Error: Replace `·ok:·false,·error:·error?.message·||·"Unexpected·error"` with `⏎········ok:·false,⏎········error:·error?.message·||·"Unexpected·error",⏎·····`  prettier/prettier
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules

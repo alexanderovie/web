@@ -1,0 +1,91 @@
+{
+  "slug": "web",
+  "title": { "es": "Diseño Web", "en": "Web Design" },
+  "hero": {
+    "headline": {
+      "es": "Tu web, tu mejor vendedor 24/7",
+      "en": "Your website, your best 24/7 salesperson"
+    },
+    "subheadline": {
+      "es": "Creamos sitios modernos, rápidos y enfocados en convertir visitantes en clientes.",
+      "en": "We build modern, fast websites focused on turning visitors into customers."
+    },
+    "image": "/images/homepage/hero-desktop.webp"
+  },
+  "benefits": [
+    {
+      "icon": "TrendingUp",
+      "title": { "es": "Más ventas", "en": "More sales" },
+      "description": {
+        "es": "Diseños que inspiran confianza y aumentan la conversión.",
+        "en": "Designs that inspire trust and boost conversion."
+      }
+    },
+    {
+      "icon": "MapPin",
+      "title": { "es": "Visibilidad local", "en": "Local visibility" },
+      "description": {
+        "es": "Optimización SEO para que te encuentren en tu ciudad.",
+        "en": "SEO optimization so you get found in your city."
+      }
+    },
+    {
+      "icon": "Star",
+      "title": { "es": "Soporte experto", "en": "Expert support" },
+      "description": {
+        "es": "Acompañamiento y soporte en todo momento.",
+        "en": "Support and guidance at every step."
+      }
+    }
+  ],
+  "gallery": [
+    "/images/homepage/features-1.png",
+    "/images/homepage/features-2.png"
+  ],
+  "process": [
+    {
+      "es": "Analizamos tus objetivos y necesidades.",
+      "en": "We analyze your goals and needs."
+    },
+    {
+      "es": "Diseñamos y desarrollamos tu web a medida.",
+      "en": "We design and develop your custom website."
+    },
+    {
+      "es": "Lanzamos y optimizamos para resultados.",
+      "en": "We launch and optimize for results."
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "Carlos Pérez",
+      "text": {
+        "es": "Mi web ahora sí me trae clientes todos los días. ¡Gracias equipo!",
+        "en": "My website now brings me clients every day. Thank you team!"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "es": "¿Cuánto tarda el desarrollo?",
+        "en": "How long does development take?"
+      },
+      "answer": {
+        "es": "Normalmente entre 2 y 4 semanas, según la complejidad.",
+        "en": "Usually between 2 and 4 weeks, depending on complexity."
+      }
+    }
+  ],
+  "cta": {
+    "text": {
+      "es": "¿Listo para tener una web que vende?",
+      "en": "Ready for a website that sells?"
+    },
+    "button": {
+      "es": "Solicita tu propuesta",
+      "en": "Request your proposal"
+    },
+    "link": "/contact"
+  }
+}

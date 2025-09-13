@@ -1,0 +1,370 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Fascinante Digital - DataForSEO API",
+    "description": "🔍 API profesional para análisis de SEO y keywords usando DataForSEO Labs. Endpoint funcional y estable para ChatGPT GPTs.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Fascinante Digital",
+      "url": "https://fascinantedigital.com",
+      "email": "info@fascinantedigital.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "termsOfService": "https://fascinantedigital.com/terms",
+    "privacyPolicy": "https://fascinantedigital.com/privacy"
+  },
+  "servers": [
+    {
+      "url": "https://fascinantedigital.com/api",
+      "description": "Fascinante Digital Production API"
+    }
+  ],
+  "externalDocs": {
+    "description": "Documentación completa de Fascinante Digital",
+    "url": "https://fascinantedigital.com/docs"
+  },
+  "paths": {
+    "/keywords/ideas": {
+      "post": {
+        "summary": "🔍 Obtener Ideas de Keywords",
+        "description": "Genera ideas de keywords relacionadas usando DataForSEO Labs API. **ENDPOINT FUNCIONAL Y ESTABLE** - Devuelve datos reales de SEO incluyendo volumen de búsquedas, competencia, CPC y tendencias.",
+        "operationId": "getKeywordIdeas",
+        "tags": ["SEO", "Keywords", "DataForSEO"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "keywords": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Keywords base para generar ideas relacionadas",
+                    "example": ["redes sociales", "marketing digital"],
+                    "minItems": 1,
+                    "maxItems": 5
+                  },
+                  "language_code": {
+                    "type": "string",
+                    "description": "Código de idioma ISO 639-1",
+                    "example": "es",
+                    "enum": ["es", "en", "fr", "de", "it", "pt", "nl", "ru", "ja", "ko", "zh"]
+                  },
+                  "location_name": {
+                    "type": "string",
+                    "description": "Ubicación para el análisis",
+                    "example": "United States",
+                    "default": "United States"
+                  },
+                  "limit": {
+                    "type": "integer",
+                    "description": "Número máximo de keywords a devolver",
+                    "example": 10,
+                    "default": 10,
+                    "minimum": 1,
+                    "maximum": 50
+                  }
+                },
+                "required": ["keywords", "language_code"]
+              },
+              "examples": {
+                "español": {
+                  "summary": "Ejemplo en español",
+                  "value": {
+                    "keywords": ["redes sociales"],
+                    "language_code": "es",
+                    "limit": 5
+                  }
+                },
+                "english": {
+                  "summary": "Example in English",
+                  "value": {
+                    "keywords": ["social media"],
+                    "language_code": "en",
+                    "limit": 10
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "✅ Keywords encontradas exitosamente",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "keyword": {
+                            "type": "string",
+                            "description": "Keyword sugerida"
+                          },
+                          "search_volume": {
+                            "type": "integer",
+                            "description": "Volumen de búsquedas mensual"
+                          },
+                          "cpc": {
+                            "type": "number",
+                            "description": "Costo por clic estimado"
+                          },
+                          "competition": {
+                            "type": "string",
+                            "description": "Nivel de competencia"
+                          },
+                          "difficulty": {
+                            "type": "number",
+                            "description": "Dificultad de la keyword"
+                          },
+                          "trend": {
+                            "type": "string",
+                            "description": "Tendencia de la keyword",
+                            "enum": ["stable", "seasonal"]
+                          },
+                          "related_keywords": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "description": "Keywords relacionadas"
+                          }
+                        }
+                      }
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "properties": {
+                        "total_keywords": {
+                          "type": "integer",
+                          "description": "Total de keywords devueltas"
+                        },
+                        "location": {
+                          "type": "string",
+                          "description": "Ubicación del análisis"
+                        },
+                        "language": {
+                          "type": "string",
+                          "description": "Idioma del análisis"
+                        },
+                        "source": {
+                          "type": "string",
+                          "description": "Fuente de datos"
+                        },
+                        "elapsed_ms": {
+                          "type": "integer",
+                          "description": "Tiempo de respuesta en ms"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "success": {
+                    "summary": "Respuesta exitosa",
+                    "value": {
+                      "success": true,
+                      "data": [
+                        {
+                          "keyword": "seguridad en redes sociales",
+                          "search_volume": 20,
+                          "cpc": 0.5,
+                          "competition": "0.01",
+                          "difficulty": 15,
+                          "trend": "stable",
+                          "related_keywords": ["privacy", "security"]
+                        },
+                        {
+                          "keyword": "cursos de redes sociales",
+                          "search_volume": 70,
+                          "cpc": 3.36,
+                          "competition": "0.48",
+                          "difficulty": 45,
+                          "trend": "seasonal",
+                          "related_keywords": ["training", "education"]
+                        }
+                      ],
+                      "metadata": {
+                        "total_keywords": 2,
+                        "location": "United States",
+                        "language": "es",
+                        "source": "DataForSEO Labs API",
+                        "elapsed_ms": 1250
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "❌ Error en los parámetros de entrada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "❌ Error interno del servidor",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "KeywordRequest": {
+        "type": "object",
+        "properties": {
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Keywords base para generar ideas"
+          },
+          "language_code": {
+            "type": "string",
+            "description": "Código de idioma"
+          },
+          "location_name": {
+            "type": "string",
+            "description": "Ubicación para el análisis"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Número máximo de keywords"
+          }
+        },
+        "required": ["keywords", "language_code"]
+      },
+      "KeywordResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/KeywordItem"
+            }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ResponseMetadata"
+          }
+        }
+      },
+      "KeywordItem": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Keyword sugerida"
+          },
+          "search_volume": {
+            "type": "integer",
+            "description": "Volumen de búsquedas mensual"
+          },
+          "cpc": {
+            "type": "number",
+            "description": "Costo por clic"
+          },
+          "competition": {
+            "type": "string",
+            "description": "Nivel de competencia"
+          },
+          "difficulty": {
+            "type": "number",
+            "description": "Dificultad de la keyword"
+          },
+          "trend": {
+            "type": "string",
+            "enum": ["stable", "seasonal"]
+          },
+          "related_keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ResponseMetadata": {
+        "type": "object",
+        "properties": {
+          "total_keywords": {
+            "type": "integer"
+          },
+          "location": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "elapsed_ms": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "SEO",
+      "description": "Herramientas de análisis SEO"
+    },
+    {
+      "name": "Keywords", 
+      "description": "Análisis y generación de keywords"
+    },
+    {
+      "name": "DataForSEO",
+      "description": "APIs de DataForSEO Labs"
+    }
+  ]
+}
+
