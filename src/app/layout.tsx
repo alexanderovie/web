@@ -52,7 +52,6 @@ export const metadata: Metadata = {
       { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    shortcut: [{ url: "/favicon.ico" }],
   },
   openGraph: {
     title: "Fascinante Digital - Soluciones Web Élite",
