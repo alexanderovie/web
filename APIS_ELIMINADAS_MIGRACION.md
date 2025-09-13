@@ -9,7 +9,6 @@
 ## 🗑️ APIs Eliminadas
 
 ### 1. **Conversaciones y Mensajería**
-
 - **Ruta:** `/api/conversations`
 - **Archivo:** `src/app/api/conversations/route.ts`
 - **Dependencias:** Supabase (whatsapp_messages table)
@@ -17,7 +16,6 @@
 - **Estado:** ❌ ELIMINADA
 
 ### 2. **Envío de WhatsApp**
-
 - **Ruta:** `/api/send-whatsapp`
 - **Archivo:** `src/app/api/send-whatsapp/route.ts`
 - **Dependencias:** WhatsApp Business API + Supabase
@@ -25,7 +23,6 @@
 - **Estado:** ❌ ELIMINADA
 
 ### 3. **Webhook de Messenger**
-
 - **Ruta:** `/api/messenger/webhook`
 - **Archivo:** `src/app/api/messenger/webhook/route.ts`
 - **Dependencias:** Facebook Messenger API + Supabase + Gemini AI
@@ -33,7 +30,6 @@
 - **Estado:** ❌ ELIMINADA
 
 ### 4. **Operaciones Supabase**
-
 - **Ruta:** `/api/supabase/delete-message`
 - **Archivo:** `src/app/api/supabase/delete-message/route.ts`
 - **Dependencias:** Supabase Service Role Key
@@ -45,7 +41,6 @@
 ## 🧹 Servicios y Librerías Eliminadas
 
 ### Librerías de Servicios
-
 - `src/lib/messenger-service.ts` - Servicio de alto nivel para Messenger
 - `src/lib/messenger-client.ts` - Cliente para Facebook Messenger API
 - `src/lib/whatsapp-client.ts` - Cliente para WhatsApp Business API
@@ -56,7 +51,6 @@
 ## 🔄 Componentes Actualizados
 
 ### Frontend con Fallbacks
-
 1. **WhatsAppForm.tsx**
    - **Antes:** Llamaba a `/api/send-whatsapp`
    - **Ahora:** Muestra mensaje de funcionalidad deshabilitada
@@ -72,18 +66,15 @@
 ## 🏗️ Plan de Migración Futura
 
 ### **Repositorio: `messaging-api`**
-
 **Propósito:** APIs de comunicación y mensajería
 
 #### APIs a Migrar:
-
 - ✅ `/api/conversations` → `messaging-api/api/conversations`
 - ✅ `/api/send-whatsapp` → `messaging-api/api/whatsapp/send`
 - ✅ `/api/messenger/webhook` → `messaging-api/api/messenger/webhook`
 - ✅ `/api/supabase/delete-message` → `messaging-api/api/messages/delete`
 
 #### Servicios a Migrar:
-
 - ✅ `messenger-service.ts` → `messaging-api/lib/messenger-service.ts`
 - ✅ `messenger-client.ts` → `messaging-api/lib/messenger-client.ts`
 - ✅ `whatsapp-client.ts` → `messaging-api/lib/whatsapp-client.ts`
@@ -94,7 +85,6 @@
 ## 🔧 Configuración Requerida
 
 ### Variables de Entorno Necesarias:
-
 ```bash
 # Supabase
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
@@ -113,7 +103,6 @@ GOOGLE_AI_API_KEY=your_gemini_key
 ```
 
 ### Base de Datos Supabase:
-
 ```sql
 -- Tabla para mensajes de WhatsApp
 CREATE TABLE whatsapp_messages (
@@ -143,7 +132,6 @@ CREATE TABLE messenger_conversations (
 ## 🚀 Pasos para Restaurar Funcionalidad
 
 ### 1. **Crear Repositorio `messaging-api`**
-
 ```bash
 mkdir messaging-api
 cd messaging-api
@@ -152,19 +140,16 @@ npm init -y
 ```
 
 ### 2. **Migrar APIs**
-
 - Copiar archivos eliminados al nuevo repositorio
 - Configurar variables de entorno
 - Configurar base de datos Supabase
 
 ### 3. **Actualizar Frontend**
-
 - Cambiar URLs de APIs en componentes
 - Configurar proxy o CORS si es necesario
 - Actualizar fallbacks
 
 ### 4. **Testing**
-
 - Probar cada API individualmente
 - Verificar integración con frontend
 - Validar webhooks de Facebook/WhatsApp
@@ -174,7 +159,6 @@ npm init -y
 ## 📊 Impacto en la Aplicación
 
 ### ✅ **Funcionalidades que Siguen Funcionando:**
-
 - Formulario de contacto básico (`/api/contact`)
 - Autenticación (`/api/auth/*`)
 - Pagos Stripe (`/api/stripe/*`)
@@ -182,14 +166,12 @@ npm init -y
 - Integraciones con Google (`/api/google-business/*`)
 
 ### ❌ **Funcionalidades Temporalmente Deshabilitadas:**
-
 - Envío de mensajes por WhatsApp
 - Gestión de conversaciones
 - Webhook de Facebook Messenger
 - Eliminación de mensajes
 
 ### 🔄 **Fallbacks Implementados:**
-
 - Mensajes informativos en lugar de errores
 - Datos estáticos en lugar de APIs dinámicas
 - Números de teléfono para contacto directo
