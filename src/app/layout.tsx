@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import type { Metadata } from "next";
 
 import "./globals.css";
+import { DevelopmentBanner } from "@/components/development-banner";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/sections/footer";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -96,6 +97,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <DevelopmentBanner />
           <Navbar />
           {children}
           <Footer />

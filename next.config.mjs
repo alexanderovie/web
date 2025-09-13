@@ -4,7 +4,7 @@ import createMDX from "@next/mdx";
 const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   
-  // Performance optimizations (Turbopack handles this automatically)
+  // Performance optimizations
   experimental: {
     optimizePackageImports: [
       'lucide-react',

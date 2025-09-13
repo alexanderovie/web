@@ -7,6 +7,8 @@
 
 @theme {
   --font-inter: var(--font-inter);
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -106,7 +108,7 @@
 
 @layer utilities {
   body {
-    font-family: var(--font-inter), sans-serif;
+    font-family: var(--font-geist-sans), sans-serif;
   }
 }
 

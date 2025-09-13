@@ -29,15 +29,14 @@ const Footer = () => {
     <footer className="border-t">
       <div className="container flex justify-between gap-8 border-x py-4 max-md:flex-col lg:py-8">
         <div className="mb-8 flex-1">
-          <Link href="/" className="flex items-center gap-1">
+          <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.svg"
-              alt="logo"
-              width={32}
+              src="/fascinante-digital-logo.svg"
+              alt="Fascinante Digital"
+              width={120}
               height={32}
               className="dark:invert"
             />
-            <span className="text-2xl leading-0 font-semibold">Relative</span>
           </Link>
         </div>
         <div className="flex flex-1 justify-between gap-8 max-sm:flex-col">
@@ -76,7 +75,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-muted-foreground-subtle container border-x border-t border-b py-4 text-sm tracking-[-0.28px] lg:py-8">
-        <p>© {new Date().getFullYear()} Relative. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Fascinante Digital. All rights reserved.
+        </p>
       </div>
       <div className="container h-6 border-x"></div>
     </footer>

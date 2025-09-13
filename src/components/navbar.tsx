@@ -61,19 +61,18 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="relative z-50 border-b backdrop-blur-sm">
+    <header className="relative z-40 border-b bg-background mt-[40px]">
       <div className="container">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1">
+          <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.svg"
-              alt="logo"
-              width={32}
+              src="/fascinante-digital-logo.svg"
+              alt="Fascinante Digital"
+              width={120}
               height={32}
               className="dark:invert"
             />
-            <span className="text-2xl leading-0 font-semibold">Relative</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -177,7 +176,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`bg-background fixed inset-0 top-full container flex h-[calc(100vh-64px)] flex-col transition-all duration-300 ease-in-out lg:hidden ${
+        className={`bg-background fixed inset-0 top-[104px] container flex h-[calc(100vh-104px)] flex-col transition-all duration-300 ease-in-out lg:hidden ${
           isMenuOpen
             ? "visible translate-x-0 opacity-100"
             : "invisible translate-x-full opacity-0"
