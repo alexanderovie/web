@@ -19,11 +19,29 @@ export default function ThirdPartyScriptsOnScroll() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Cargar scripts de terceros
-  useLoadScript(
-    shouldLoad ? "https://connect.facebook.net/en_US/fbevents.js" : "",
-    "fb-pixel",
-  );
+  // Cargar Facebook Pixel de forma segura
+  useEffect(() => {
+    if (shouldLoad && typeof window !== "undefined") {
+      // Verificar si ya existe el script
+      if (document.getElementById("fb-pixel")) return;
+
+      const script = document.createElement("script");
+      script.src = "https://connect.facebook.net/en_US/fbevents.js";
+      script.async = true;
+      script.id = "fb-pixel";
+      script.onload = () => {
+        // Inicializar fbq después de cargar el script
+        if (window.fbq) {
+          // El fbq ya está inicializado en layout.tsx
+          console.log("Facebook Pixel cargado correctamente");
+        }
+      };
+      script.onerror = () => {
+        console.warn("Error al cargar Facebook Pixel");
+      };
+      document.head.appendChild(script);
+    }
+  }, [shouldLoad]);
   useLoadScript(
     shouldLoad ? "https://js.hs-analytics.net/44229799.js" : "",
     "hubspot-analytics",
