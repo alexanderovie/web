@@ -28,21 +28,23 @@ export default function Page() {
   useEffect(() => {
     const loadConversations = async () => {
       try {
-        const response = await fetch("/api/conversations");
-        if (response.ok) {
-          const data = await response.json();
-          setConversations(data);
-        } else {
-          console.error("Error cargando conversaciones");
-          // Fallback a datos estáticos si la API falla
-          const fallbackData = await import("./data.json");
-          setConversations(fallbackData.default);
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        // Fallback a datos estáticos
+        // API eliminada temporalmente - usar datos estáticos
         const fallbackData = await import("./data.json");
         setConversations(fallbackData.default);
+      } catch (error) {
+        console.error("Error cargando datos:", error);
+        // Datos de ejemplo si no hay archivo
+        setConversations([
+          {
+            id: 1,
+            header: "Sistema temporalmente en mantenimiento",
+            type: "Sistema",
+            status: "Info",
+            target: "Usuario",
+            limit: "N/A",
+            reviewer: "Sistema",
+          },
+        ]);
       } finally {
         setLoading(false);
       }

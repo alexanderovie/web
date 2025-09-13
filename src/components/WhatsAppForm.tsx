@@ -29,36 +29,14 @@ export default function WhatsAppForm() {
     setIsLoading(true);
     setMessage(null);
 
-    try {
-      const response = await fetch("/api/send-whatsapp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setMessage({
-          type: "success",
-          text: `Mensaje enviado exitosamente! SID: ${data.sid}`,
-        });
-      } else {
-        setMessage({
-          type: "error",
-          text: `Error: ${data.error}`,
-        });
-      }
-    } catch {
+    // Simular envío (API eliminada temporalmente)
+    setTimeout(() => {
       setMessage({
-        type: "error",
-        text: "Error al enviar el mensaje",
+        type: "success",
+        text: "Funcionalidad de WhatsApp temporalmente deshabilitada. Contacta al (800) 886-4981 para asistencia.",
       });
-    } finally {
       setIsLoading(false);
-    }
+    }, 1000);
   };
 
   const handleChange =

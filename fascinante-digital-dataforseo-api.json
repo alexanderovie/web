@@ -54,7 +54,19 @@
                     "type": "string",
                     "description": "Código de idioma ISO 639-1",
                     "example": "es",
-                    "enum": ["es", "en", "fr", "de", "it", "pt", "nl", "ru", "ja", "ko", "zh"]
+                    "enum": [
+                      "es",
+                      "en",
+                      "fr",
+                      "de",
+                      "it",
+                      "pt",
+                      "nl",
+                      "ru",
+                      "ja",
+                      "ko",
+                      "zh"
+                    ]
                   },
                   "location_name": {
                     "type": "string",
@@ -358,7 +370,7 @@
       "description": "Herramientas de análisis SEO"
     },
     {
-      "name": "Keywords", 
+      "name": "Keywords",
       "description": "Análisis y generación de keywords"
     },
     {
@@ -367,4 +379,3 @@
     }
   ]
 }
-

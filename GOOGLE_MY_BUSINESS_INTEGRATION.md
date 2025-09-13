@@ -7,12 +7,14 @@ Esta integración permite a los usuarios conectar sus cuentas de Google My Busin
 ## 🚀 Funcionalidades Implementadas
 
 ### 1. **Autenticación OAuth 2.0**
+
 - Conexión segura con Google My Business usando `next-auth`
 - Scope requerido: `https://www.googleapis.com/auth/business.manage`
 - Almacenamiento seguro de tokens en Supabase
 - Refresco automático de tokens expirados
 
 ### 2. **Gestión de Cuentas**
+
 - Listado de todas las cuentas de Google My Business del usuario
 - Soporte para diferentes tipos de cuenta:
   - `ORGANIZATION`: Organizaciones
@@ -22,6 +24,7 @@ Esta integración permite a los usuarios conectar sus cuentas de Google My Busin
 - Información de verificación y estado de cada cuenta
 
 ### 3. **Gestión de Ubicaciones**
+
 - Listado de ubicaciones por cuenta
 - Información detallada de cada ubicación:
   - Título del negocio
@@ -29,12 +32,14 @@ Esta integración permite a los usuarios conectar sus cuentas de Google My Busin
   - Métricas de rendimiento
 
 ### 4. **Métricas de Performance**
+
 - **Clics en sitio web**: Número total de clics en el sitio web del negocio
 - **Clics en llamadas**: Número total de clics en el botón de llamada
 - **Datos históricos**: Métricas diarias desde 2024
 - **Análisis detallado**: Top 5 días con mayor actividad
 
 ### 5. **Dashboard Interactivo**
+
 - Vista general de todas las cuentas y ubicaciones
 - Métricas agregadas en tiempo real
 - Gráficos de distribución de cuentas
@@ -45,10 +50,13 @@ Esta integración permite a los usuarios conectar sus cuentas de Google My Busin
 ### APIs Internas
 
 #### 1. `/api/google-business/locations`
+
 ```typescript
-GET /api/google-business/locations
+GET / api / google - business / locations;
 ```
+
 **Respuesta:**
+
 ```json
 {
   "success": true,
@@ -84,10 +92,13 @@ GET /api/google-business/locations
 ```
 
 #### 2. `/api/google-business/locations/[locationId]/metrics`
+
 ```typescript
-GET /api/google-business/locations/6450607283398197254/metrics
+GET / api / google - business / locations / 6450607283398197254 / metrics;
 ```
+
 **Respuesta:**
+
 ```json
 {
   "success": true,
@@ -118,17 +129,20 @@ GET /api/google-business/locations/6450607283398197254/metrics
 ### APIs de Google
 
 #### 1. **Account Management API**
+
 ```
 GET https://mybusinessaccountmanagement.googleapis.com/v1/accounts
 ```
 
 #### 2. **Business Information API**
+
 ```
 GET https://mybusinessbusinessinformation.googleapis.com/v1/accounts/{accountId}/locations?readMask=name
 GET https://mybusinessbusinessinformation.googleapis.com/v1/locations/{locationId}?readMask=title
 ```
 
 #### 3. **Performance API**
+
 ```
 GET https://businessprofileperformance.googleapis.com/v1/locations/{locationId}:fetchMultiDailyMetricsTimeSeries
 ```
@@ -136,21 +150,25 @@ GET https://businessprofileperformance.googleapis.com/v1/locations/{locationId}:
 ## 📊 Casos de Uso Soportados
 
 ### 1. **Usuario con múltiples cuentas**
+
 - ✅ 5 cuentas diferentes (Alexander Oviedo, Clientes Nuevos, Equipo de Onboarding, Fascinante Digital, Socios)
 - ✅ Solo 1 cuenta con ubicaciones (Clientes Nuevos: 3 ubicaciones)
 - ✅ 4 cuentas sin ubicaciones
 
 ### 2. **Usuario con múltiples ubicaciones**
+
 - ✅ 3 ubicaciones en "Clientes Nuevos":
   - Fascinante Digital
   - Vibrance
   - Lilian Spa
 
 ### 3. **Usuario sin ubicaciones**
+
 - ✅ Manejo de cuentas sin ubicaciones
 - ✅ Mensajes informativos apropiados
 
 ### 4. **Métricas de rendimiento**
+
 - ✅ Datos históricos desde 2024
 - ✅ Clics en sitio web y llamadas
 - ✅ Análisis de días con mayor actividad
@@ -158,18 +176,21 @@ GET https://businessprofileperformance.googleapis.com/v1/locations/{locationId}:
 ## 🎨 Componentes UI
 
 ### 1. **Página Principal GBP** (`/dashboard/gbp`)
+
 - Métricas principales en cards
 - Lista detallada de cuentas y ubicaciones
 - Resumen general con estadísticas
 - Gráfico de distribución de cuentas
 
 ### 2. **Modal de Métricas Detalladas**
+
 - Métricas específicas por ubicación
 - Top 5 días con mayor actividad
 - Resumen de actividad del período
 - Datos históricos diarios
 
 ### 3. **Indicadores Visuales**
+
 - Iconos por tipo de cuenta
 - Estados de verificación con badges
 - Botones de acción para ver detalles
@@ -178,6 +199,7 @@ GET https://businessprofileperformance.googleapis.com/v1/locations/{locationId}:
 ## 🔧 Configuración
 
 ### Variables de Entorno Requeridas
+
 ```env
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
@@ -186,11 +208,13 @@ SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 ```
 
 ### Configuración de Google Cloud Console
+
 1. Habilitar Google My Business API
 2. Habilitar Business Profile Performance API
 3. Configurar OAuth 2.0 con scope `https://www.googleapis.com/auth/business.manage`
 
 ### Base de Datos Supabase
+
 ```sql
 -- Tabla para almacenar tokens de Google My Business
 CREATE TABLE google_business_tokens (
@@ -209,18 +233,21 @@ CREATE TABLE google_business_tokens (
 ## 🚀 Próximas Mejoras
 
 ### 1. **Métricas Adicionales**
+
 - [ ] Búsquedas directas e indirectas
 - [ ] Visualizaciones en Maps y Search
 - [ ] Reseñas y calificaciones
 - [ ] Fotos y posts locales
 
 ### 2. **Funcionalidades Avanzadas**
+
 - [ ] Comparación de períodos
 - [ ] Exportación de datos
 - [ ] Alertas de rendimiento
 - [ ] Recomendaciones de optimización
 
 ### 3. **Integración con Otras APIs**
+
 - [ ] Google Search Console
 - [ ] Google Analytics
 - [ ] Google Ads
@@ -228,11 +255,13 @@ CREATE TABLE google_business_tokens (
 ## 📝 Notas Técnicas
 
 ### Limitaciones Conocidas
+
 1. **readMask obligatorio**: La API de Business Information requiere especificar campos exactos
 2. **Métricas limitadas**: Solo WEBSITE_CLICKS y CALL_CLICKS están disponibles actualmente
 3. **Duración de tokens**: Los tokens expiran en 1 hora, requieren refresco
 
 ### Mejores Prácticas
+
 1. **Manejo de errores**: Implementado para todos los casos de error de API
 2. **Caching**: Considerar implementar cache para métricas históricas
 3. **Rate limiting**: Respetar límites de la API de Google
@@ -241,6 +270,7 @@ CREATE TABLE google_business_tokens (
 ## 🔍 Testing
 
 ### Casos de Prueba
+
 1. ✅ Usuario con múltiples cuentas y ubicaciones
 2. ✅ Usuario con cuentas sin ubicaciones
 3. ✅ Token expirado
@@ -248,6 +278,7 @@ CREATE TABLE google_business_tokens (
 5. ✅ Métricas con y sin datos
 
 ### Comandos de Prueba
+
 ```bash
 # Probar API de ubicaciones
 curl -H "Authorization: Bearer YOUR_TOKEN" \
@@ -267,6 +298,3 @@ Para problemas técnicos o preguntas sobre la integración, contactar al equipo 
 **Versión**: 1.0.0  
 **Última actualización**: Diciembre 2024  
 **Desarrollado por**: Fascinante Digital
-
-
-
