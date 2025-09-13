@@ -5,7 +5,6 @@ import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
 import ThirdPartyScriptsOnScroll from "@/components/ThirdPartyScriptsOnScroll";
 import { Toaster } from "@/components/ui/sonner";
-import FacebookPixelInit from "@/components/FacebookPixelInit";
 
 export const metadata = {
   title: "Fascinante Digital - Plataforma de productividad IA",
@@ -48,6 +47,20 @@ export default function RootLayout({ children }: Props) {
     <html lang="es" suppressHydrationWarning>
       <head>
         <meta property="fb:app_id" content="1236469251478295" />
+        <Script
+          id="fb-pixel-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined' && !window.fbq) {
+                window.fbq = function(...args) {
+                  (window.fbq.q = window.fbq.q || []).push(args);
+                };
+                window.fbq.q = window.fbq.q || [];
+              }
+            `,
+          }}
+        />
         {gtmId && (
           <Script
             id="gtm-script"
@@ -73,7 +86,6 @@ export default function RootLayout({ children }: Props) {
         >
           {children}
           <Toaster position="bottom-right" richColors closeButton />
-          <FacebookPixelInit />
           <ThirdPartyScriptsOnScroll />
         </ThemeProvider>
       </body>

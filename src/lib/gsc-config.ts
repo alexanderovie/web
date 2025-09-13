@@ -4,8 +4,8 @@ export const GSC_CONFIG = {
   API_BASE_URL: "https://searchconsole.googleapis.com/v1",
 
   // Environment variables needed:
-  // GOOGLE_CLIENT_ID: OAuth 2.0 Client ID
-  // GOOGLE_CLIENT_SECRET: OAuth 2.0 Client Secret
+  // AUTH_GOOGLE_ID: OAuth 2.0 Client ID (NextAuth 5.0 standard)
+  // AUTH_GOOGLE_SECRET: OAuth 2.0 Client Secret (NextAuth 5.0 standard)
   // GOOGLE_SERVICE_ACCOUNT_KEY: Service Account JSON key
   // GSC_SITE_URL: Your verified site URL (e.g., 'https://example.com')
 
@@ -48,8 +48,8 @@ export function getSiteUrl(): string {
 // Helper function to validate configuration
 export function validateGSCConfig(): boolean {
   const requiredEnvVars = [
-    "GOOGLE_CLIENT_ID",
-    "GOOGLE_CLIENT_SECRET",
+    "AUTH_GOOGLE_ID",
+    "AUTH_GOOGLE_SECRET",
     "GSC_SITE_URL",
   ];
 

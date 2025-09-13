@@ -5,18 +5,18 @@ import GoogleProvider from "next-auth/providers/google";
 export const authOptions: NextAuthConfig = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      clientId: process.env.AUTH_GOOGLE_ID!,
+      clientSecret: process.env.AUTH_GOOGLE_SECRET!,
       authorization: {
         params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code",
           scope: [
             "openid",
             "email",
             "profile",
             "https://www.googleapis.com/auth/business.manage",
-            "https://www.googleapis.com/auth/plus.business.manage",
-            "https://www.googleapis.com/auth/userinfo.profile",
-            "https://www.googleapis.com/auth/userinfo.email",
           ].join(" "),
         },
       },

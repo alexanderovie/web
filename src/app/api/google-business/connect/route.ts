@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
     ].join(" ");
 
     const params = new URLSearchParams({
-      client_id: process.env.GOOGLE_CLIENT_ID!,
+      client_id: process.env.AUTH_GOOGLE_ID!,
       redirect_uri: `${process.env.NEXTAUTH_URL}/api/google-business/callback`,
       response_type: "code",
       scope: scopes,
