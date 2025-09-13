@@ -28,10 +28,15 @@ export default function ConversationsPage() {
         <div>
           <h2 className="text-4xl font-bold tracking-tight">Conversaciones</h2>
           <p className="text-muted-foreground">
-            Gestiona todas las conversaciones de tus canales de comunicación
+            Sistema de conversaciones migrado a messaging-api (en desarrollo)
           </p>
         </div>
-        <Badge variant="secondary"># PENDIENTE</Badge>
+        <Badge
+          variant="outline"
+          className="bg-yellow-50 text-yellow-700 border-yellow-200"
+        >
+          🔄 MIGRANDO
+        </Badge>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -98,7 +103,12 @@ export default function ConversationsPage() {
             <div className="flex items-center justify-center h-64 text-muted-foreground">
               <div className="text-center">
                 <IconAlertTriangle className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                <p>Gráfico pendiente de implementación</p>
+                <p className="font-medium mb-2">
+                  Sistema migrando a messaging-api
+                </p>
+                <p className="text-sm">
+                  Las conversaciones se gestionarán desde el nuevo microservicio
+                </p>
               </div>
             </div>
           </CardContent>
@@ -142,7 +152,7 @@ export default function ConversationsPage() {
               Configurar canales
             </Button>
             <p className="text-sm text-muted-foreground mt-2">
-              Esta funcionalidad está pendiente de desarrollo
+              Esta funcionalidad se migrará al microservicio messaging-api
             </p>
           </CardContent>
         </Card>

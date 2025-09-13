@@ -6,7 +6,8 @@ import { ChartPieInteractive } from "@/components/chart-pie-interactive";
 import { DataTable } from "@/components/data-table";
 import { SectionCards } from "@/components/section-cards";
 
-interface Conversation {
+// Interface para datos de ejemplo (antes era Conversation)
+interface SystemData {
   id: number;
   header: string;
   type: string;
@@ -14,27 +15,22 @@ interface Conversation {
   target: string;
   limit: string;
   reviewer: string;
-  conversationId?: string;
-  lastMessage?: string;
-  timestamp?: string;
-  unreadCount?: number;
-  phone?: string;
 }
 
 export default function Page() {
-  const [conversations, setConversations] = useState<Conversation[]>([]);
+  const [systemData, setSystemData] = useState<SystemData[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadConversations = async () => {
+    const loadSystemData = async () => {
       try {
         // API eliminada temporalmente - usar datos estáticos
         const fallbackData = await import("./data.json");
-        setConversations(fallbackData.default);
+        setSystemData(fallbackData.default);
       } catch (error) {
         console.error("Error cargando datos:", error);
         // Datos de ejemplo si no hay archivo
-        setConversations([
+        setSystemData([
           {
             id: 1,
             header: "Sistema temporalmente en mantenimiento",
@@ -50,7 +46,7 @@ export default function Page() {
       }
     };
 
-    loadConversations();
+    loadSystemData();
   }, []);
 
   if (loading) {
@@ -72,7 +68,7 @@ export default function Page() {
             <div className="text-center">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
               <p className="text-muted-foreground">
-                Cargando conversaciones...
+                Cargando datos del sistema...
               </p>
             </div>
           </div>
@@ -97,7 +93,7 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <DataTable data={conversations} />
+          <DataTable data={systemData} />
         </div>
       </div>
     </div>

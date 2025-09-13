@@ -15,6 +15,52 @@ const nextConfig = {
     "http://127.0.0.1:3000",
     "http://10.0.0.242:3000", // tu IP local
   ],
+  // 🚀 OPTIMIZACIÓN DE RENDIMIENTO: Redirecciones optimizadas
+  async redirects() {
+    return [
+      {
+        // Redirección principal: / -> /en (elimina redirección intermedia)
+        source: "/",
+        destination: "/en",
+        permanent: true, // 308 - Cache permanente para mejor performance
+      },
+    ];
+  },
+  // 🚀 OPTIMIZACIÓN DE RENDIMIENTO: Headers de cache optimizados
+  async headers() {
+    return [
+      {
+        // Cache para assets estáticos
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable", // 1 año
+          },
+        ],
+      },
+      {
+        // Cache para imágenes
+        source: "/images/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable", // 1 año
+          },
+        ],
+      },
+      {
+        // Cache para favicon y manifest
+        source: "/(.*)\\.(ico|png|jpg|jpeg|gif|webp|svg|woff|woff2|ttf|eot)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable", // 1 año
+          },
+        ],
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
