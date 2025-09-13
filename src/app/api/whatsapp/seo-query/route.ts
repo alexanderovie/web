@@ -1,6 +1,6 @@
 /**
  * 🔍 SEO QUERY - Consultas SEO desde WhatsApp
- * 
+ *
  * Permite a los usuarios de WhatsApp consultar información SEO
  * Conecta con las APIs de DataForSEO para análisis de keywords
  */
@@ -21,33 +21,33 @@ const DATAFORSEO_CONFIG = {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { 
-      phone, 
-      query_type, 
-      keywords, 
-      language_code = "es", 
+    const {
+      phone,
+      query_type,
+      keywords,
+      language_code = "es",
       location_name = "United States",
-      limit = 5 
+      limit = 5,
     } = body;
 
     // Validación de entrada
     if (!phone || !query_type || !keywords) {
       return NextResponse.json(
-        { 
-          success: false, 
-          error: "Missing required fields: phone, query_type, keywords" 
+        {
+          success: false,
+          error: "Missing required fields: phone, query_type, keywords",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     if (!Array.isArray(keywords) || keywords.length === 0) {
       return NextResponse.json(
-        { 
-          success: false, 
-          error: "keywords must be a non-empty array" 
+        {
+          success: false,
+          error: "keywords must be a non-empty array",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
       query_type,
       keywords,
       language_code,
-      location_name
+      location_name,
     });
 
     // Crear cliente de DataForSEO
@@ -76,53 +76,55 @@ export async function POST(request: NextRequest) {
           limit,
           include_clickstream_data: false,
         });
-        
+
         if (seoData?.tasks?.[0]?.result?.[0]?.items) {
           const items = seoData.tasks[0].result[0].items;
-          responseMessage = `🔑 **KEYWORD IDEAS** para "${keywords.join(', ')}":\n\n`;
-          
+          responseMessage = `🔑 **KEYWORD IDEAS** para "${keywords.join(", ")}":\n\n`;
+
           items.slice(0, 3).forEach((item: any, index: number) => {
             const keyword = item.keyword;
-            const volume = item.search_volume || item.keyword_info?.search_volume || 0;
+            const volume =
+              item.search_volume || item.keyword_info?.search_volume || 0;
             const competition = item.competition_level || "UNKNOWN";
             const cpc = item.cpc || item.keyword_info?.cpc || 0;
-            
+
             responseMessage += `${index + 1}. **${keyword}**\n`;
             responseMessage += `   📊 Volumen: ${volume.toLocaleString()}\n`;
             responseMessage += `   🏆 Competencia: ${competition}\n`;
             responseMessage += `   💰 CPC: $${cpc.toFixed(2)}\n\n`;
           });
-          
+
           if (items.length > 3) {
             responseMessage += `... y ${items.length - 3} keywords más.`;
           }
         } else {
-          responseMessage = `❌ No se encontraron ideas de keywords para "${keywords.join(', ')}"`;
+          responseMessage = `❌ No se encontraron ideas de keywords para "${keywords.join(", ")}"`;
         }
         break;
 
       case "search_volume":
         console.log("📊 Consultando Search Volume...");
         // Aquí podrías implementar la API de search volume
-        responseMessage = `📊 **SEARCH VOLUME** para "${keywords.join(', ')}":\n\n`;
+        responseMessage = `📊 **SEARCH VOLUME** para "${keywords.join(", ")}":\n\n`;
         responseMessage += `🔍 Consulta de volumen de búsquedas implementada.\n`;
         responseMessage += `📈 Datos disponibles en el dashboard.`;
         break;
 
       case "competition_analysis":
         console.log("🏆 Analizando Competencia...");
-        responseMessage = `🏆 **ANÁLISIS DE COMPETENCIA** para "${keywords.join(', ')}":\n\n`;
+        responseMessage = `🏆 **ANÁLISIS DE COMPETENCIA** para "${keywords.join(", ")}":\n\n`;
         responseMessage += `🔍 Análisis de competencia implementado.\n`;
         responseMessage += `📊 Revisa el dashboard para detalles completos.`;
         break;
 
       default:
         return NextResponse.json(
-          { 
-            success: false, 
-            error: "Invalid query_type. Supported: keyword_ideas, search_volume, competition_analysis" 
+          {
+            success: false,
+            error:
+              "Invalid query_type. Supported: keyword_ideas, search_volume, competition_analysis",
           },
-          { status: 400 }
+          { status: 400 },
         );
     }
 
@@ -139,18 +141,17 @@ export async function POST(request: NextRequest) {
         source: "DataForSEO API",
         language: language_code,
         location: location_name,
-        total_keywords: keywords.length
-      }
+        total_keywords: keywords.length,
+      },
     };
 
     console.log("✅ SEO Query procesada exitosamente:", {
       phone,
       query_type,
-      response_length: responseMessage.length
+      response_length: responseMessage.length,
     });
 
     return NextResponse.json(whatsappResponse);
-
   } catch (error: any) {
     console.error("❌ Error en SEO Query:", error);
 
@@ -161,7 +162,7 @@ export async function POST(request: NextRequest) {
         message: error.message || "Failed to process SEO query",
         timestamp: new Date().toISOString(),
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -173,15 +174,15 @@ export async function GET() {
     message: "SEO Query endpoint for WhatsApp",
     supported_queries: [
       "keyword_ideas",
-      "search_volume", 
-      "competition_analysis"
+      "search_volume",
+      "competition_analysis",
     ],
     example: {
       phone: "+1234567890",
       query_type: "keyword_ideas",
       keywords: ["redes sociales"],
       language_code: "es",
-      location_name: "United States"
-    }
+      location_name: "United States",
+    },
   });
 }

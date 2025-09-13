@@ -1,6 +1,6 @@
 /**
  * 📊 SEO REPORT - Envío de Reportes SEO por WhatsApp
- * 
+ *
  * Genera y envía reportes SEO personalizados por WhatsApp
  * Incluye análisis de keywords, competencia y recomendaciones
  */
@@ -20,10 +20,14 @@ const DATAFORSEO_CONFIG = {
 };
 
 // 📊 Generar reporte SEO completo
-async function generateSEOReport(keywords: string[], language_code: string, location_name: string) {
+async function generateSEOReport(
+  keywords: string[],
+  language_code: string,
+  location_name: string,
+) {
   try {
     const client = new DataForSEOClient(DATAFORSEO_CONFIG);
-    
+
     // 🔑 Obtener keyword ideas
     const keywordIdeas = await client.getKeywordIdeas({
       keywords,
@@ -35,29 +39,32 @@ async function generateSEOReport(keywords: string[], language_code: string, loca
 
     // 📈 Generar reporte estructurado
     let report = `📊 **REPORTE SEO COMPLETO**\n`;
-    report += `🔍 Keywords: ${keywords.join(', ')}\n`;
+    report += `🔍 Keywords: ${keywords.join(", ")}\n`;
     report += `🌍 Ubicación: ${location_name}\n`;
     report += `🗣️ Idioma: ${language_code.toUpperCase()}\n`;
-    report += `📅 Fecha: ${new Date().toLocaleDateString('es-ES')}\n\n`;
+    report += `📅 Fecha: ${new Date().toLocaleDateString("es-ES")}\n\n`;
 
     if (keywordIdeas?.tasks?.[0]?.result?.[0]?.items) {
       const items = keywordIdeas.tasks[0].result[0].items;
-      
+
       report += `🔑 **TOP KEYWORDS ENCONTRADAS**\n\n`;
-      
+
       // Top 5 keywords con mejor potencial
       const topKeywords = items
         .filter((item: any) => item.search_volume > 0)
-        .sort((a: any, b: any) => (b.search_volume || 0) - (a.search_volume || 0))
+        .sort(
+          (a: any, b: any) => (b.search_volume || 0) - (a.search_volume || 0),
+        )
         .slice(0, 5);
 
       topKeywords.forEach((item: any, index: number) => {
         const keyword = item.keyword;
-        const volume = item.search_volume || item.keyword_info?.search_volume || 0;
+        const volume =
+          item.search_volume || item.keyword_info?.search_volume || 0;
         const competition = item.competition_level || "UNKNOWN";
         const cpc = item.cpc || item.keyword_info?.cpc || 0;
         const difficulty = item.keyword_difficulty || "N/A";
-        
+
         report += `${index + 1}. **${keyword}**\n`;
         report += `   📊 Volumen: ${volume.toLocaleString()}\n`;
         report += `   🏆 Competencia: ${competition}\n`;
@@ -66,12 +73,17 @@ async function generateSEOReport(keywords: string[], language_code: string, loca
       });
 
       // 📊 Estadísticas generales
-      const totalVolume = items.reduce((sum: number, item: any) => 
-        sum + (item.search_volume || item.keyword_info?.search_volume || 0), 0
+      const totalVolume = items.reduce(
+        (sum: number, item: any) =>
+          sum + (item.search_volume || item.keyword_info?.search_volume || 0),
+        0,
       );
-      const avgCPC = items.reduce((sum: number, item: any) => 
-        sum + (item.cpc || item.keyword_info?.cpc || 0), 0
-      ) / items.length;
+      const avgCPC =
+        items.reduce(
+          (sum: number, item: any) =>
+            sum + (item.cpc || item.keyword_info?.cpc || 0),
+          0,
+        ) / items.length;
 
       report += `📈 **ESTADÍSTICAS GENERALES**\n`;
       report += `   📊 Total de keywords: ${items.length}\n`;
@@ -80,26 +92,26 @@ async function generateSEOReport(keywords: string[], language_code: string, loca
 
       // 🎯 Recomendaciones
       report += `🎯 **RECOMENDACIONES**\n`;
-      
-      const lowCompetition = items.filter((item: any) => 
-        item.competition_level === "LOW"
+
+      const lowCompetition = items.filter(
+        (item: any) => item.competition_level === "LOW",
       ).length;
-      
-      const highVolume = items.filter((item: any) => 
-        (item.search_volume || item.keyword_info?.search_volume || 0) > 1000
+
+      const highVolume = items.filter(
+        (item: any) =>
+          (item.search_volume || item.keyword_info?.search_volume || 0) > 1000,
       ).length;
 
       if (lowCompetition > 0) {
         report += `   ✅ ${lowCompetition} keywords con baja competencia\n`;
       }
-      
+
       if (highVolume > 0) {
         report += `   🔥 ${highVolume} keywords con alto volumen\n`;
       }
 
       report += `   📱 Revisa el dashboard para análisis completo\n`;
       report += `   🌐 Visita: fascinantedigital.com\n\n`;
-
     } else {
       report += `❌ No se encontraron datos para las keywords especificadas.\n`;
       report += `🔍 Verifica que las keywords sean válidas.\n\n`;
@@ -111,42 +123,41 @@ async function generateSEOReport(keywords: string[], language_code: string, loca
     report += `   🌐 Web: fascinantedigital.com`;
 
     return report;
-
   } catch (error) {
     console.error("❌ Error generando reporte SEO:", error);
-    return `❌ Error generando reporte SEO: ${error instanceof Error ? error.message : 'Unknown error'}`;
+    return `❌ Error generando reporte SEO: ${error instanceof Error ? error.message : "Unknown error"}`;
   }
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { 
-      phone, 
-      keywords, 
-      language_code = "es", 
+    const {
+      phone,
+      keywords,
+      language_code = "es",
       location_name = "United States",
-      send_via_whatsapp = true 
+      send_via_whatsapp = true,
     } = body;
 
     // Validación de entrada
     if (!phone || !keywords) {
       return NextResponse.json(
-        { 
-          success: false, 
-          error: "Missing required fields: phone, keywords" 
+        {
+          success: false,
+          error: "Missing required fields: phone, keywords",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     if (!Array.isArray(keywords) || keywords.length === 0) {
       return NextResponse.json(
-        { 
-          success: false, 
-          error: "keywords must be a non-empty array" 
+        {
+          success: false,
+          error: "keywords must be a non-empty array",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -154,11 +165,15 @@ export async function POST(request: NextRequest) {
       phone,
       keywords,
       language_code,
-      location_name
+      location_name,
     });
 
     // 📊 Generar reporte SEO
-    const seoReport = await generateSEOReport(keywords, language_code, location_name);
+    const seoReport = await generateSEOReport(
+      keywords,
+      language_code,
+      location_name,
+    );
 
     // 📱 Enviar por WhatsApp si está habilitado
     let whatsappResult = null;
@@ -169,7 +184,12 @@ export async function POST(request: NextRequest) {
         console.log("✅ Reporte enviado por WhatsApp exitosamente");
       } catch (whatsappError) {
         console.error("❌ Error enviando por WhatsApp:", whatsappError);
-        whatsappResult = { error: whatsappError instanceof Error ? whatsappError.message : 'Unknown error' };
+        whatsappResult = {
+          error:
+            whatsappError instanceof Error
+              ? whatsappError.message
+              : "Unknown error",
+        };
       }
     }
 
@@ -186,18 +206,17 @@ export async function POST(request: NextRequest) {
         report_length: seoReport.length,
         language: language_code,
         location: location_name,
-        total_keywords: keywords.length
-      }
+        total_keywords: keywords.length,
+      },
     };
 
     console.log("✅ Reporte SEO generado y enviado:", {
       phone,
       report_length: seoReport.length,
-      whatsapp_sent: send_via_whatsapp
+      whatsapp_sent: send_via_whatsapp,
     });
 
     return NextResponse.json(response);
-
   } catch (error: any) {
     console.error("❌ Error en SEO Report:", error);
 
@@ -208,7 +227,7 @@ export async function POST(request: NextRequest) {
         message: error.message || "Failed to generate SEO report",
         timestamp: new Date().toISOString(),
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -222,14 +241,14 @@ export async function GET() {
       "Generación de reportes SEO completos",
       "Análisis de keywords y competencia",
       "Envío automático por WhatsApp",
-      "Recomendaciones personalizadas"
+      "Recomendaciones personalizadas",
     ],
     example: {
       phone: "+1234567890",
       keywords: ["marketing digital", "seo"],
       language_code: "es",
       location_name: "United States",
-      send_via_whatsapp: true
-    }
+      send_via_whatsapp: true,
+    },
   });
 }
