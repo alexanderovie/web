@@ -186,20 +186,16 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Mensaje de estado */}
-          {message && (
+          {/* Mensaje de estado - Solo para casos especiales, Sonner maneja la mayoría */}
+          {message && !isSuccess && (
             <div
               className={`flex items-center gap-2 p-3 rounded-md ${
-                isSuccess
-                  ? "bg-green-50 text-green-700 border border-green-200"
-                  : isError
-                    ? "bg-red-50 text-red-700 border border-red-200"
-                    : "bg-blue-50 text-blue-700 border border-blue-200"
+                isError
+                  ? "bg-red-50 text-red-700 border border-red-200"
+                  : "bg-blue-50 text-blue-700 border border-blue-200"
               }`}
             >
-              {isSuccess ? (
-                <CheckCircle className="size-4" />
-              ) : isError ? (
+              {isError ? (
                 <AlertCircle className="size-4" />
               ) : null}
               <span className="text-sm">{message}</span>

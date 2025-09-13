@@ -7,6 +7,7 @@ import { DevelopmentBanner } from "@/components/development-banner";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/sections/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "sonner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -104,6 +105,19 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Toaster 
+            position="top-right"
+            richColors
+            closeButton
+            duration={4000}
+            toastOptions={{
+              style: {
+                background: 'hsl(var(--background))',
+                border: '1px solid hsl(var(--border))',
+                color: 'hsl(var(--foreground))',
+              },
+            }}
+          />
         </ThemeProvider>
       </body>
     </html>
