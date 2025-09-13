@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
           quantity: 1,
         },
       ],
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/${lang || "es"}/dashboard?success=1`,
+      success_url: `https://dashboard.fascinantedigital.com?success=1`,
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/${lang || "es"}/pricing?canceled=1`,
       metadata: {
         user_email: session.user.email,

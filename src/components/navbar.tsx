@@ -72,7 +72,7 @@ function AuthButtons({ isMobile = false }: { isMobile?: boolean } = {}) {
           <UserMenu />
         </div>
         <Link
-          href={`/${lang}/dashboard`}
+          href="https://dashboard.fascinantedigital.com"
           className={
             isMobile ? "block w-full" : "transition-opacity duration-300"
           }
@@ -420,7 +420,10 @@ function MobileMainButtons() {
               <ChevronRight className="size-4" />
             </Button>
           </Link>
-          <Link href={`/${lang}/dashboard`} className="block w-full">
+          <Link
+            href="https://dashboard.fascinantedigital.com"
+            className="block w-full"
+          >
             <Button variant="outline" className="w-full gap-1 h-11">
               {t("dashboard")}
               <ChevronRight className="size-4" />

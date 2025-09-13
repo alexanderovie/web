@@ -112,7 +112,7 @@ export function NavUser() {
             <DropdownMenuGroup>
               <DropdownMenuItem asChild>
                 <a
-                  href={`/${pathname ? pathname.split("/")[1] || "es" : "es"}/dashboard`}
+                  href="https://dashboard.fascinantedigital.com"
                   className="cursor-pointer"
                 >
                   <IconUser />
@@ -130,7 +130,7 @@ export function NavUser() {
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <a
-                  href={`/${pathname ? pathname.split("/")[1] || "es" : "es"}/dashboard`}
+                  href="https://dashboard.fascinantedigital.com"
                   className="cursor-pointer"
                 >
                   <IconSettings />

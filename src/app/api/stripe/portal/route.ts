@@ -67,9 +67,7 @@ export async function POST() {
     // Crea la sesión del portal
     const portalSession = await stripe.billingPortal.sessions.create({
       customer: stripeCustomerId,
-      return_url:
-        process.env.PORTAL_RETURN_URL ||
-        process.env.NEXT_PUBLIC_BASE_URL + "/dashboard",
+      return_url: "https://dashboard.fascinantedigital.com",
     });
 
     return NextResponse.json({ url: portalSession.url });

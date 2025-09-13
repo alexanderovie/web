@@ -15,7 +15,10 @@ export async function GET(request: NextRequest) {
 
     if (!installationId) {
       return NextResponse.redirect(
-        new URL("/dashboard/deployments?error=no_installation", request.url),
+        new URL(
+          "https://dashboard.fascinantedigital.com?error=no_installation",
+          request.url,
+        ),
       );
     }
 
@@ -44,7 +47,10 @@ export async function GET(request: NextRequest) {
     if (installError) {
       console.error("Error saving GitHub installation:", installError);
       return NextResponse.redirect(
-        new URL("/dashboard/deployments?error=save_failed", request.url),
+        new URL(
+          "https://dashboard.fascinantedigital.com?error=save_failed",
+          request.url,
+        ),
       );
     }
 
@@ -88,12 +94,18 @@ export async function GET(request: NextRequest) {
     }
 
     return NextResponse.redirect(
-      new URL("/dashboard/deployments?success=github_connected", request.url),
+      new URL(
+        "https://dashboard.fascinantedigital.com?success=github_connected",
+        request.url,
+      ),
     );
   } catch (error) {
     console.error("Error in GitHub callback:", error);
     return NextResponse.redirect(
-      new URL("/dashboard/deployments?error=callback_failed", request.url),
+      new URL(
+        "https://dashboard.fascinantedigital.com?error=callback_failed",
+        request.url,
+      ),
     );
   }
 }

@@ -15,6 +15,9 @@ const MIDDLEWARE_CONFIG = {
   // Rutas protegidas que requieren autenticación
   protectedPaths: ["/dashboard"] as const,
 
+  // URL del dashboard elite
+  dashboardEliteUrl: "https://dashboard.fascinantedigital.com",
+
   // Rutas estáticas que no requieren procesamiento
   staticPaths: new Set([
     "/api",
@@ -362,22 +365,21 @@ export default auth(async function middleware(request) {
   }
 
   // ==============================================
-  // 🔒 AUTHENTICATION
+  // 🔓 DASHBOARD ACCESS (NO AUTH REQUIRED)
   // ==============================================
 
-  // Verificar rutas protegidas con NextAuth session
+  // Verificar rutas del dashboard
   const { locale } = extractLocaleFromPath(pathname);
   const currentLocale = locale || MIDDLEWARE_CONFIG.defaultLocale;
 
-  const isProtectedPath = MIDDLEWARE_CONFIG.protectedPaths.some((path) =>
+  const isDashboardPath = MIDDLEWARE_CONFIG.protectedPaths.some((path) =>
     pathname.startsWith(`/${currentLocale}${path}`),
   );
 
-  if (isProtectedPath && !request.auth) {
-    console.log(`🔒 Redirecting unauthenticated user from ${pathname}`);
-    return NextResponse.redirect(
-      new URL(`/${currentLocale}/login`, request.url),
-    );
+  // Permitir acceso directo al dashboard sin autenticación
+  if (isDashboardPath) {
+    console.log(`🔓 Allowing direct dashboard access: ${pathname}`);
+    // No hacer nada, permitir que continúe sin autenticación
   }
 
   // ==============================================

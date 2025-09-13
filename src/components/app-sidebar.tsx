@@ -64,7 +64,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   }, [pathname]);
 
   const mainMenu: MenuItem[] = [
-    { title: t("digitalSummary"), url: `/${lang}/dashboard`, icon: IconHome },
+    {
+      title: t("digitalSummary"),
+      url: "https://dashboard.fascinantedigital.com",
+      icon: IconHome,
+    },
     {
       title: t("serpAudit"),
       url: `/${lang}/dashboard/auditoriaserp`,

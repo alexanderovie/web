@@ -27,7 +27,7 @@ export default function LoginPage() {
         : `/${locale}${next.startsWith("/") ? next : "/" + next}`;
       router.replace(nextWithLang);
     } else {
-      router.replace(`/${locale}/dashboard`);
+      router.replace("https://dashboard.fascinantedigital.com");
     }
     return null;
   }
