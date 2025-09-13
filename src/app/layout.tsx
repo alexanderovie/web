@@ -5,7 +5,6 @@ import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
 import ThirdPartyScriptsOnScroll from "@/components/ThirdPartyScriptsOnScroll";
 import { Toaster } from "@/components/ui/sonner";
-import MultichannelWidget from "@/components/multichannel-widget";
 
 export const metadata = {
   title: "Fascinante Digital - Plataforma de productividad IA",
@@ -73,7 +72,6 @@ export default function RootLayout({ children }: Props) {
           {children}
           <Toaster position="bottom-right" richColors closeButton />
           <ThirdPartyScriptsOnScroll />
-          <MultichannelWidget />
         </ThemeProvider>
       </body>
     </html>
