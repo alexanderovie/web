@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 
+import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "sonner";
 
@@ -20,7 +21,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://web.fascinantedigital.com"),
+  metadataBase: new URL("https://fascinantedigital.com"),
   title: {
     default: "Fascinante Digital - Soluciones Web Élite",
     template: "%s | Fascinante Digital",
