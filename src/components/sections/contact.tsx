@@ -1,8 +1,18 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 import Link from "next/link";
 
-import { Mail, Phone, Building, ChevronRight, LucideIcon } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Building,
+  ChevronRight,
+  LucideIcon,
+  CheckCircle,
+  AlertCircle,
+} from "lucide-react";
 
 import SectionHeader from "../section-header";
 
@@ -11,6 +21,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useContactForm } from "@/hooks/use-contact-form";
 
 const contactMethods = [
   {
@@ -90,6 +101,39 @@ const formFields = [
   },
 ];
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const { submitForm, isLoading, message, isSuccess, isError, resetForm } =
+    useContactForm();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!termsAccepted) {
+      alert("Por favor acepta los términos y condiciones");
+      return;
+    }
+
+    await submitForm(formData);
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleReset = () => {
+    setFormData({ name: "", email: "", message: "" });
+    setTermsAccepted(false);
+    resetForm();
+  };
+
   return (
     <section className="py-14 md:py-20 lg:py-24">
       <SectionHeader
@@ -101,7 +145,7 @@ const Contact = () => {
       />
 
       <div className="container flex justify-between gap-10 py-12 max-md:flex-col">
-        <form className="flex flex-1 flex-col gap-6">
+        <form onSubmit={handleSubmit} className="flex flex-1 flex-col gap-6">
           {formFields.map((field) => (
             <div key={field.id} className="space-y-2">
               <Label className="text-sm font-normal" htmlFor={field.id}>
@@ -109,16 +153,26 @@ const Contact = () => {
               </Label>
               <field.component
                 id={field.id}
+                name={field.id}
                 type={field.type}
                 required={field.required}
                 className="border-border bg-card"
+                value={formData[field.id as keyof typeof formData]}
+                onChange={handleInputChange}
                 {...field.props}
               />
             </div>
           ))}
 
           <div className="flex items-center space-x-2">
-            <Checkbox id="terms" required />
+            <Checkbox
+              id="terms"
+              checked={termsAccepted}
+              onCheckedChange={(checked) =>
+                setTermsAccepted(checked as boolean)
+              }
+              required
+            />
             <div className="grid gap-1.5 leading-none">
               <Label
                 htmlFor="terms"
@@ -132,7 +186,46 @@ const Contact = () => {
             </div>
           </div>
 
-          <Button type="submit">Enviar</Button>
+          {/* Mensaje de estado */}
+          {message && (
+            <div
+              className={`flex items-center gap-2 p-3 rounded-md ${
+                isSuccess
+                  ? "bg-green-50 text-green-700 border border-green-200"
+                  : isError
+                    ? "bg-red-50 text-red-700 border border-red-200"
+                    : "bg-blue-50 text-blue-700 border border-blue-200"
+              }`}
+            >
+              {isSuccess ? (
+                <CheckCircle className="size-4" />
+              ) : isError ? (
+                <AlertCircle className="size-4" />
+              ) : null}
+              <span className="text-sm">{message}</span>
+            </div>
+          )}
+
+          <div className="flex gap-3">
+            <Button
+              type="submit"
+              disabled={isLoading || !termsAccepted}
+              className="flex-1"
+            >
+              {isLoading ? "Enviando..." : "Enviar"}
+            </Button>
+
+            {isSuccess && (
+              <Button
+                type="button"
+                variant="outline"
+                onClick={handleReset}
+                className="flex-1"
+              >
+                Nuevo Mensaje
+              </Button>
+            )}
+          </div>
         </form>
 
         <div className="grid flex-1 gap-6 self-start lg:grid-cols-2">
